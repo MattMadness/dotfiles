@@ -82,7 +82,7 @@ extract () {
   fi
 }
 
-# Display distro logo upon opening
+# Display this message when I enter the bash prompt
 printf "\033[0;36mWindows \033[0;32m< \033[0;33mLinux \033[0;32mForever\n"
 printf "\033[0;35mFree as in Freedom!\n"
 printf "\n"
