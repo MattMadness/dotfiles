@@ -1,12 +1,13 @@
 #!/bin/sh
 
-echo "Updating dotfiles..."
+echo "Updating dot configs..."
 
-cp ~/.bashrc ~/Toolbox/dotfiles/dot.bashrc
-cp -r /etc/xdg ~/Toolbox/dotfiles/etc/
+cp ~/.bashrc ~/Toolbox/dotfiles/.bashrc
+cp -r ~/.config/xfce4 ~/Toolbox/dotfiles/.config/
+cp -r ~/.config/Thunar ~/Toolbox/dotfiles/.config/
 
-echo "Updating pacman configurations..."
+echo "Updating pacman configs..."
 
-cp /etc/pacman.conf ~/Toolbox/dotfiles/etc/pacman.conf
+cp /etc/pacman.conf ~/Toolbox/dotfiles/pacman.conf
 
 echo "Done!"
