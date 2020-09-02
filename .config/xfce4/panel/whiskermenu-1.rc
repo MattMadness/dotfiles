@@ -1,5 +1,5 @@
 favorites=exo-web-browser.desktop,exo-mail-reader.desktop,exo-file-manager.desktop,exo-terminal-emulator.desktop
-recent=exo-file-manager.desktop,vlc.desktop,org.xfce.Parole.desktop,timeshift-gtk.desktop,pidgin.desktop,thunar.desktop,brave-browser.desktop,virt-manager.desktop,sublime_text.desktop,exo-terminal-emulator.desktop
+recent=exo-file-manager.desktop,wine-Programs-HxD Hex Editor-HxD.desktop,pidgin.desktop,geany.desktop,thunar.desktop,nm-connection-editor.desktop,vlc.desktop,org.xfce.Parole.desktop,timeshift-gtk.desktop,brave-browser.desktop
 button-icon=/home/matthew/Pictures/archlenny.png
 button-single-row=false
 show-button-title=false

@@ -61,7 +61,7 @@ alias yayclean='yay -Rs $(pacman -Qqdt)'
 alias m_bedtime="sudo pacman -Syu --noconfirm && yay -Sayu --answerclean n --answerdiff n --answeredit n --answerupgrade y --removemake --cleanafter && shutdown now"
 alias m_logto="sudo dmesg -w > "
 alias m_firefox="firefox &"
-alias m_wifi="sudo ifconfig wlp12s0 down && sudo ifconfig wlp12s0 up"
+alias m_wifi="echo Restarting wireless interface... && sudo ifconfig wlp12s0 down && sudo ifconfig wlp12s0 up && echo Waiting 5 seconds for network to restart... && sleep 5 && echo All set!"
 
 # Extract Function
 extract () {
