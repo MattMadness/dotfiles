@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+Name=Brave Beta
+GenericName=Web Browser
+Comment=Access the Internet
+StartupNotify=true
+StartupWMClass=brave-beta
+TryExec=brave-beta
+Exec=brave-beta %U
+Terminal=false
+Icon=brave-beta
+Type=Application
+Categories=Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml_xml;image/webp;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;
+X-XFCE-Source=file:///usr/share/applications/brave-browser.desktop
