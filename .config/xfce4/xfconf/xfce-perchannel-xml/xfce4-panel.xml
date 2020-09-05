@@ -36,9 +36,9 @@
       <property name="leave-opacity" type="uint" value="100"/>
       <property name="autohide-behavior" type="uint" value="0"/>
       <property name="background-rgba" type="array">
-        <value type="double" value="0.033333"/>
-        <value type="double" value="0.033333"/>
-        <value type="double" value="0.033333"/>
+        <value type="double" value="0.113333"/>
+        <value type="double" value="0.113333"/>
+        <value type="double" value="0.113333"/>
         <value type="double" value="1.000000"/>
       </property>
       <property name="background-image" type="string" value="/home/matthew/Pictures/wallpapers/0057.jpg"/>
