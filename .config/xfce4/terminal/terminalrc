@@ -32,9 +32,8 @@ MiscNewTabAdjacent=FALSE
 MiscSearchDialogOpacity=100
 MiscShowUnsafePasteDialog=TRUE
 FontName=Liberation Mono 10
-ColorPalette=rgb(0,0,0);rgb(204,0,0);rgb(53,255,0);rgb(255,223,0);rgb(0,2,255);rgb(152,69,166);rgb(0,206,209);rgb(211,215,207);rgb(85,87,83);rgb(239,41,41);rgb(138,226,52);rgb(252,233,79);rgb(115,159,207);rgb(173,127,168);rgb(52,226,226);rgb(238,238,236)
-ColorCursorForeground=#a4a400000000
-ColorCursor=#a4a400000000
-ColorForeground=#ffffffffffff
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
+ColorPalette=#000000;#cd0000;#00cd00;#cdcd00;#0000cd;#cd00cd;#00cdcd;#e5e5e5;#7f7f7f;#ff0000;#00ff00;#ffff00;#5c5cff;#ff00ff;#00ffff;#ffffff
+ColorForeground=#ffffffffffff
+ColorBackground=#000000000000
 

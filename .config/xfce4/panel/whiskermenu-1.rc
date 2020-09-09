@@ -1,6 +1,6 @@
 favorites=exo-web-browser.desktop,exo-mail-reader.desktop,exo-file-manager.desktop,exo-terminal-emulator.desktop
-recent=gparted.desktop,net.lutris.Lutris.desktop,wine-Programs-League of Legends-League of Legends.desktop,exo-file-manager.desktop,xfce4-notes.desktop,timeshift-gtk.desktop,pidgin.desktop,org.openshot.OpenShot.desktop,wine-Programs-HxD Hex Editor-HxD.desktop,geany.desktop
-button-icon=/home/matthew/Pictures/archlenny.png
+recent=exo-file-manager.desktop,monero-gui.desktop,electrum.desktop,pidgin.desktop,timeshift-gtk.desktop,gparted.desktop,chromium.desktop,firefox.desktop,net.lutris.Lutris.desktop,wine-Programs-League of Legends-League of Legends.desktop
+button-icon=~/.config/xfce4/archlenny.png
 button-single-row=false
 show-button-title=false
 show-button-icon=true
