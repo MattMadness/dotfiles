@@ -52,7 +52,6 @@ alias psgrep='ps aux | grep -v grep | grep -i -e VSZ -e'
 alias wget='wget -c'
 alias histg='history | grep'
 alias myip='curl ipv4.icanhazip.com'
-alias mylocation="geoiplookup $(curl -s ipv4.icanhazip.com)"
 alias grep='grep --color=auto'
 alias ddg='w3m lite.duckduckgo.com/lite'
 alias yayclean='yay -Rs $(pacman -Qqdt)'

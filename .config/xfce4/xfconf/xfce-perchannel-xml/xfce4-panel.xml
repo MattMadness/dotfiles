@@ -12,8 +12,8 @@
       <property name="size" type="uint" value="35"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="1"/>
-        <value type="int" value="28"/>
         <value type="int" value="13"/>
+        <value type="int" value="16"/>
         <value type="int" value="27"/>
         <value type="int" value="2"/>
         <value type="int" value="7"/>
@@ -62,7 +62,6 @@
       <property name="plugin-ids" type="array">
         <value type="int" value="6"/>
         <value type="int" value="3"/>
-        <value type="int" value="10"/>
         <value type="int" value="4"/>
       </property>
     </property>
@@ -98,6 +97,7 @@
     <property name="plugin-15" type="string" value="notification-plugin"/>
     <property name="plugin-3" type="string" value="systray">
       <property name="names-ordered" type="array">
+        <value type="string" value="protonvpn-applet"/>
         <value type="string" value="electrum"/>
         <value type="string" value="steam"/>
         <value type="string" value="vlc"/>
@@ -138,15 +138,14 @@
         <value type="string" value="15986683297.desktop"/>
       </property>
     </property>
-    <property name="plugin-28" type="string" value="launcher">
-      <property name="items" type="array">
-        <value type="string" value="15986683186.desktop"/>
-      </property>
-    </property>
-    <property name="plugin-10" type="string" value="thunar-tpa"/>
     <property name="plugin-13" type="string" value="launcher">
       <property name="items" type="array">
-        <value type="string" value="15988887411.desktop"/>
+        <value type="string" value="15996614632.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-16" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="15996619724.desktop"/>
       </property>
     </property>
   </property>
