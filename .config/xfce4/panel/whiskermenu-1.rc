@@ -1,5 +1,5 @@
 favorites=exo-web-browser.desktop,exo-mail-reader.desktop,exo-file-manager.desktop,exo-terminal-emulator.desktop
-recent=exo-terminal-emulator.desktop,supertuxkart.desktop,io.github.Hexchat.desktop,pidgin.desktop,discord.desktop,menulibre.desktop,tor-browser.desktop,exo-file-manager.desktop,org.gnome.Maps.desktop,timeshift-gtk.desktop
+recent=redshift-gtk.desktop,io.crow_translate.CrowTranslate.desktop,vlc.desktop,timeshift-gtk.desktop,exo-terminal-emulator.desktop,discord.desktop,nm-connection-editor.desktop,menulibre-syobon-action.desktop,io.elementary.music.desktop,exo-file-manager.desktop
 button-icon=/home/matthew/.config/xfce4/archlenny.png
 button-single-row=false
 show-button-title=false
@@ -21,8 +21,8 @@ position-commands-alternate=false
 position-categories-alternate=true
 stay-on-focus-out=false
 confirm-session-command=true
-menu-width=526
-menu-height=511
+menu-width=515
+menu-height=512
 menu-opacity=75
 command-settings=xfce4-settings-manager
 show-command-settings=true

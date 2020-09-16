@@ -44,7 +44,7 @@ ALERT="${BWhite}${On_Red}" # Bold White on red background
 alias c='clear'
 alias ..='cd ..'
 alias ls='ls -CFAsh --color=auto'
-alias lsless="dir -CFsh --color=auto"
+alias ll="dir -CFsh --color=auto"
 alias mkdir='mkdir -pv'
 alias free='free -mt'
 alias ps='ps auxf'
