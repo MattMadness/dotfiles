@@ -21,6 +21,6 @@ ColumnPriority=FALSE
 SortColumn=0
 SortType=0
 WindowWidth=490
-WindowHeight=465
+WindowHeight=430
 HandlePosition=100
 ProcessTreeView=FALSE

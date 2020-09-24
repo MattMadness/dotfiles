@@ -62,6 +62,7 @@
     </property>
     <property name="plugin-6" type="string" value="systray">
       <property name="names-ordered" type="array">
+        <value type="string" value="task manager"/>
         <value type="string" value="transmission"/>
         <value type="string" value="clipman"/>
         <value type="string" value="firewall-applet"/>
@@ -88,7 +89,7 @@
     </property>
     <property name="plugin-8" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value="chromium.instance1655;chromium.instance26101;chromium.instance2987;chromium.instance3291;chromium.instance37738;spotify;vlc"/>
+      <property name="mpris-players" type="string" value="chromium.instance1655;chromium.instance26101;chromium.instance2987;chromium.instance3291;chromium.instance37738;firefox.instance5081;spotify;vlc"/>
     </property>
     <property name="plugin-3" type="string" value="pager">
       <property name="rows" type="uint" value="1"/>

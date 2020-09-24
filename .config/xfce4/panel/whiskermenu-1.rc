@@ -1,5 +1,5 @@
 favorites=exo-web-browser.desktop,exo-mail-reader.desktop,exo-file-manager.desktop,exo-terminal-emulator.desktop
-recent=torbrowser.desktop,discord.desktop,geany.desktop,thunderbird.desktop,org.manjaro.pamac.manager.desktop,virt-manager.desktop,exo-terminal-emulator.desktop,io.github.Hexchat.desktop,spotify-adblock.desktop,sublime_text.desktop
+recent=wine-Programs-GOG.com-Fallout-Fallout (Classic).desktop,wine-Programs-GOG.com-Fallout-HI-Res Config.desktop,wine-Programs-GOG.com-Fallout-Fallout.desktop,transmission-gtk.desktop,wine-Programs-Valve-Half-Life-MODs-Team Fortress Classic.desktop,wine-Programs-Valve-Half-Life-Half-Life.desktop,xfce-display-settings.desktop,xfce4-taskmanager.desktop,exo-terminal-emulator.desktop,org.gnome.DiskUtility.desktop
 button-title=\ \ \ Applications\ \ \ 
 button-icon=/home/matthew/.config/xfce4/archlenny.png
 button-single-row=false

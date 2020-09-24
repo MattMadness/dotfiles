@@ -8,6 +8,7 @@ cp ~/.zshrc ./.zshrc
 cp -r ~/.config/xfce4 ./.config/
 cp -r ~/.config/Thunar ./.config/
 cp -r ~/.config/awesome ./.config/
+cp -r ~/.config/cairo-dock ./.config/
 
 echo "Updating pacman configs..."
 
