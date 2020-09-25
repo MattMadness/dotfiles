@@ -27,6 +27,19 @@
         <property name="Y" type="int" value="0"/>
       </property>
     </property>
+    <property name="VIRTUAL1" type="string" value="VIRTUAL1">
+      <property name="Active" type="bool" value="false"/>
+      <property name="EDID" type="string" value=""/>
+      <property name="Resolution" type="string" value="1280x1024"/>
+      <property name="RefreshRate" type="double" value="59.998237"/>
+      <property name="Rotation" type="int" value="0"/>
+      <property name="Reflection" type="string" value="0"/>
+      <property name="Primary" type="bool" value="false"/>
+      <property name="Position" type="empty">
+        <property name="X" type="int" value="0"/>
+        <property name="Y" type="int" value="0"/>
+      </property>
+    </property>
   </property>
   <property name="ActiveProfile" type="string" value="Default"/>
   <property name="Fallback" type="empty">
@@ -38,6 +51,19 @@
       <property name="Rotation" type="int" value="0"/>
       <property name="Reflection" type="string" value="0"/>
       <property name="Primary" type="bool" value="true"/>
+      <property name="Position" type="empty">
+        <property name="X" type="int" value="0"/>
+        <property name="Y" type="int" value="0"/>
+      </property>
+    </property>
+    <property name="VIRTUAL1" type="string" value="VIRTUAL1">
+      <property name="Active" type="bool" value="false"/>
+      <property name="EDID" type="string" value=""/>
+      <property name="Resolution" type="string" value="1280x1024"/>
+      <property name="RefreshRate" type="double" value="59.998237"/>
+      <property name="Rotation" type="int" value="0"/>
+      <property name="Reflection" type="string" value="0"/>
+      <property name="Primary" type="bool" value="false"/>
       <property name="Position" type="empty">
         <property name="X" type="int" value="0"/>
         <property name="Y" type="int" value="0"/>
