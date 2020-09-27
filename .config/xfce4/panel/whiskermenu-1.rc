@@ -1,5 +1,5 @@
 favorites=exo-web-browser.desktop,exo-mail-reader.desktop,exo-file-manager.desktop,exo-terminal-emulator.desktop
-recent=org.kde.kdeconnect.app.desktop,org.kde.kdeconnect.nonplasma.desktop,spotify-adblock.desktop,wine-Programs-GOG.com-Fallout-HI-Res Config.desktop,wine-Programs-GOG.com-Undertale-Uninstall Undertale.desktop,exo-preferred-applications.desktop,wine-Programs-Valve-Half-Life-Half-Life.desktop,org.inkscape.Inkscape.desktop,exo-terminal-emulator.desktop,wine-Programs-Valve-Half-Life-MODs-Ricochet.desktop
+recent=xfce-display-settings.desktop,torbrowser.desktop,exo-terminal-emulator.desktop,org.manjaro.pamac.manager.desktop,electrum.desktop,exo-file-manager.desktop,org.kde.kdeconnect.app.desktop,org.kde.kdeconnect.nonplasma.desktop,spotify-adblock.desktop,wine-Programs-GOG.com-Fallout-HI-Res Config.desktop
 button-title=\ \ \ Applications\ \ \ 
 button-icon=/home/matthew/.config/xfce4/archlenny.png
 button-single-row=false
