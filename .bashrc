@@ -89,6 +89,8 @@ echo -e '\e[0;34m'
 cat /etc/os-release | perl -n -e '/^NAME=\"([a-zA-Z ]*)\"$/ && print "$1\n"' 
 echo -e '\e[0;33m'
 uname -r
+echo -e '\e[0;36m'
+cal
 echo -e '\e[m'
 
 # Set PATH so it includes user's private bin directories

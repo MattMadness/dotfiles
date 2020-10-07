@@ -1,5 +1,5 @@
 favorites=exo-web-browser.desktop,exo-mail-reader.desktop,exo-file-manager.desktop,exo-terminal-emulator.desktop
-recent=xfce-display-settings.desktop,torbrowser.desktop,exo-terminal-emulator.desktop,org.manjaro.pamac.manager.desktop,electrum.desktop,exo-file-manager.desktop,org.kde.kdeconnect.app.desktop,org.kde.kdeconnect.nonplasma.desktop,spotify-adblock.desktop,wine-Programs-GOG.com-Fallout-HI-Res Config.desktop
+recent=io.crow_translate.CrowTranslate.desktop,audacity.desktop,exo-terminal-emulator.desktop,openttd.desktop,xfce-wmtweaks-settings.desktop,org.manjaro.pamac.manager.desktop,armagetronad.desktop,spotify-adblock.desktop,geany.desktop,vncviewer.desktop
 button-title=\ \ \ Applications\ \ \ 
 button-icon=/home/matthew/.config/xfce4/archlenny.png
 button-single-row=false
@@ -12,8 +12,8 @@ item-icon-size=2
 hover-switch-category=false
 category-show-name=true
 category-icon-size=0
-load-hierarchy=false
-view-as-icons=true
+load-hierarchy=true
+view-as-icons=false
 recent-items-max=10
 favorites-in-recent=true
 display-recent-default=false

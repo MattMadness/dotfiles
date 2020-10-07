@@ -18,8 +18,8 @@ row=3
 col=1
 
 [/home/matthew/Desktop/gimp.desktop]
-row=1
-col=1
+row=5
+col=0
 
 [/home/matthew/Desktop/exo-file-manager.desktop]
 row=3
@@ -34,22 +34,18 @@ row=1
 col=14
 
 [/home/matthew/Desktop/Thunderbird.desktop]
-row=0
-col=1
+row=6
+col=0
 
 [/home/matthew/Desktop/Half-Life.desktop]
 row=1
 col=15
 
-[/home/matthew/Desktop/Matthew Evan - Thematic Essay Question Week 2 - 2020.odt]
-row=0
-col=4
-
 [/home/matthew/Desktop/firefox.desktop]
-row=1
+row=7
 col=0
 
 [Trash]
-row=0
+row=4
 col=0
 
