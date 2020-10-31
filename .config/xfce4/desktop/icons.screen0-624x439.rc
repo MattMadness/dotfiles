@@ -2,92 +2,92 @@
 4.10.3+=true
 
 [/home/matthew/Desktop/virt-manager.desktop]
-row=2
-col=3
+row=4
+col=4
 
 [/home/matthew/Desktop/Undertale.desktop]
 row=0
-col=10
+col=4
 
 [/home/matthew/Desktop/geany.desktop]
 row=0
 col=2
 
 [/home/matthew/Desktop/supertuxkart.desktop]
-row=1
-col=9
+row=3
+col=3
 
 [/home/matthew/Desktop/Thunderbird.desktop]
 row=0
 col=1
 
 [/home/matthew/Desktop/Fallout.desktop]
-row=0
-col=11
+row=4
+col=2
 
 [/home/matthew/Desktop/org.manjaro.pamac.manager.desktop]
-row=1
+row=0
 col=3
 
 [/home/matthew/Desktop/org.gnome.Nibbles.desktop]
-row=2
-col=10
+row=4
+col=0
 
 [/home/matthew/Desktop/xfce4-taskmanager.desktop]
-row=3
+row=2
 col=1
 
 [/home/matthew/Desktop/teeworlds.desktop]
 row=1
-col=10
-
-[/home/matthew/Desktop/org.inkscape.Inkscape.desktop]
-row=2
-col=1
-
-[/home/matthew/Desktop/cherrytree.desktop]
-row=3
 col=3
 
+[/home/matthew/Desktop/org.inkscape.Inkscape.desktop]
+row=3
+col=4
+
 [/home/matthew/Desktop/supertux2.desktop]
-row=0
-col=9
+row=2
+col=3
 
 [/home/matthew/Desktop/sublime_text.desktop]
 row=1
 col=2
 
 [/home/matthew/Desktop/Legend ofZelda: Majora's Mask.desktop]
-row=2
-col=9
+row=1
+col=4
 
 [/home/matthew/Desktop/vlc.desktop]
-row=0
-col=3
+row=2
+col=4
 
 [/home/matthew/Desktop/Half-Life.desktop]
-row=1
-col=11
+row=4
+col=3
 
 [/home/matthew/Desktop/exo-file-manager.desktop]
 row=3
 col=0
 
+[/home/matthew/Desktop/htop.desktop]
+row=3
+col=1
+
 [/home/matthew/Desktop/gimp.desktop]
 row=1
 col=1
 
-[/home/matthew/Desktop/org.kde.bomber.desktop]
-row=2
-col=11
+[/home/matthew/Desktop/emacs.desktop]
+row=3
+col=2
 
 [/home/matthew/Desktop/vim.desktop]
 row=2
 col=2
 
-[/home/matthew/Desktop/emacs.desktop]
-row=3
-col=2
+[/home/matthew/Desktop/org.kde.bomber.desktop]
+row=4
+col=1
 
 [/home/matthew/Desktop/Brave.desktop]
 row=2

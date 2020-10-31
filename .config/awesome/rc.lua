@@ -38,10 +38,10 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
-beautiful.init("/usr/share/awesome/themes/blackarch/theme.lua")
+beautiful.init("/home/matthew/.config/awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "xfce4-terminal"
+terminal = "termite"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -97,21 +97,20 @@ myawesomemenu = {
 }
 
 termmenu = {
-    { "term (grey)", "urxvt -bg black -fg grey" },
-    { "term (red)", "urxvt -bg black -fg red" },
-    { "term (green)", "urxvt -bg black -fg green" },
-    { "term (yellow)", "urxvt -bg black -fg yellow" },
-    { "term (white)", "urxvt -bg black -fg white" }
+    { "termite", "termite" },
+    { "terminator", "terminator" }
 }
 
 browsermenu = {
     { "firefox", "firefox" },
-    { "chromium", "chromium" }
+    { "brave", "brave" }
 }
 
-networkmenu = {
-    { "wifi-radar", "wifi-radar" },
-    { "wifi-radar-polkit", "wifi-radar-polkit" }
+editmenu = {
+    { "vim", "termite --exec=vim" },
+    { "emacs", "emacs" },
+    { "sublime", "subl" },
+    { "geany", "geany" }
 }
 
 mymainmenu = awful.menu({
@@ -119,7 +118,7 @@ items = {
 		{ "awesome", myawesomemenu, beautiful.awesome_icon },
 		{ "terminals", termmenu },
 		{ "browsers", browsermenu },
-    { "network", networkmenu },
+                { "editing", editmenu },
 	}
 })
 

@@ -43,8 +43,8 @@ ALERT="${BWhite}${On_Red}" # Bold White on red background
 # Useful aliases
 alias c='clear'
 alias ..='cd ..'
-alias ls='ls -CFAsh --color=auto'
-alias ll="dir -CFsh --color=auto"
+alias ls='lsd -l --color=auto'
+alias lsm="lsd -al --color=auto"
 alias mkdir='mkdir -pv'
 alias free='free -mt'
 alias ps='ps auxf'
@@ -61,6 +61,11 @@ alias m_bedtime="sudo pacman -Syu --noconfirm && yay -Sayu --answerclean n --ans
 alias m_logto="sudo dmesg -w > "
 alias m_firefox="firefox &"
 alias m_wifi="echo Restarting wireless interface... && sudo ifconfig wlp12s0 down && sudo ifconfig wlp12s0 up && echo Waiting 10 seconds for network to restart... && sleep 10 && echo All set!"
+alias m_xfce="cd && rm .xinitrc && echo exec startxfce4 >> .xinitrc && startx"
+alias m_dwm="cd && rm .xinitrc && echo exec dwm >> .xinitrc && startx"
+alias m_lxqt="cd && rm .xinitrc && echo exec startlxqt >> .xinitrc && startx"
+alias m_awesome="cd && rm .xinitrc && echo exec awesome >> .xinitrc && startx"
+
 
 # Extract Function
 extract () {
@@ -91,7 +96,6 @@ echo -e '\e[0;33m'
 uname -r
 echo -e '\e[0;36m'
 cal
-echo -e '\e[m'
 
 # Set PATH so it includes user's private bin directories
 PATH="${HOME}/bin:${HOME}/.local/bin:${PATH}"

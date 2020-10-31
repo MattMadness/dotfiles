@@ -3,18 +3,18 @@
 
 [/home/matthew/Desktop/Half-Life.desktop]
 row=1
-col=11
+col=0
 
 [/home/matthew/Desktop/Fallout.desktop]
 row=0
-col=11
+col=1
 
 [/home/matthew/Desktop/Brave.desktop]
-row=2
+row=3
 col=0
 
 [/home/matthew/Desktop/htop.desktop]
-row=3
+row=4
 col=1
 
 [/home/matthew/Desktop/xfce4-taskmanager.desktop]
@@ -22,12 +22,12 @@ row=2
 col=1
 
 [/home/matthew/Desktop/exo-file-manager.desktop]
-row=3
+row=5
 col=0
 
 [/home/matthew/Desktop/teeworlds.desktop]
-row=1
-col=10
+row=4
+col=0
 
 [/home/matthew/Desktop/geany.desktop]
 row=0
@@ -38,7 +38,7 @@ row=1
 col=1
 
 [/home/matthew/Desktop/Thunderbird.desktop]
-row=0
+row=3
 col=1
 
 [/home/matthew/Desktop/sublime_text.desktop]
@@ -54,14 +54,14 @@ row=3
 col=2
 
 [/home/matthew/Desktop/firefox.desktop]
-row=1
+row=2
 col=0
 
 [/home/matthew/Desktop/Undertale.desktop]
 row=0
-col=10
+col=0
 
 [Trash]
-row=0
-col=0
+row=5
+col=1
 

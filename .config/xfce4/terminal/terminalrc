@@ -1,7 +1,7 @@
 [Configuration]
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
-MiscBellUrgent=FALSE
+MiscBellUrgent=TRUE
 MiscBordersDefault=TRUE
 MiscCursorBlinks=TRUE
 MiscCursorShape=TERMINAL_CURSOR_SHAPE_BLOCK
@@ -17,7 +17,7 @@ MiscTabCloseButtons=TRUE
 MiscTabCloseMiddleClick=TRUE
 MiscTabPosition=GTK_POS_TOP
 MiscHighlightUrls=TRUE
-MiscMiddleClickOpensUri=FALSE
+MiscMiddleClickOpensUri=TRUE
 MiscCopyOnSelect=FALSE
 MiscDefaultWorkingDir=
 MiscRewrapOnResize=TRUE
@@ -34,9 +34,11 @@ MiscShowUnsafePasteDialog=TRUE
 FontName=Liberation Mono 10
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
 ColorPalette=#000000;#cd0000;#00cd00;#cdcd00;#0000cd;#cd00cd;#00cdcd;#e5e5e5;#7f7f7f;#ff0000;#00ff00;#ffff00;#5c5cff;#ff00ff;#00ffff;#ffffff
-ColorForeground=#ffffffffffff
+ColorForeground=#d1eafa77ffff
 ColorBackground=#000000000000
 FontUseSystem=TRUE
 ShortcutsNoMenukey=TRUE
 ShortcutsNoHelpkey=TRUE
+CustomCommand=/bin/fish
+RunCustomCommand=TRUE
 

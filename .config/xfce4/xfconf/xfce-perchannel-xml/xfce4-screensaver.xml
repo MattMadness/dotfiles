@@ -15,5 +15,16 @@
   </property>
   <property name="lock" type="empty">
     <property name="enabled" type="bool" value="true"/>
+    <property name="logout" type="empty">
+      <property name="enabled" type="bool" value="false"/>
+    </property>
+  </property>
+  <property name="screensavers" type="empty">
+    <property name="xfce-floaters" type="empty">
+      <property name="print-stats" type="bool" value="false"/>
+      <property name="arguments" type="string" value="-n 5"/>
+      <property name="do-rotations" type="bool" value="false"/>
+      <property name="show-paths" type="bool" value="false"/>
+    </property>
   </property>
 </channel>
