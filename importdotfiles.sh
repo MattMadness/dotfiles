@@ -26,6 +26,7 @@ cp -r ./.config/awesome ~/.config/
 cp -r ./.config/cairo-dock ~/.config/
 cp -r ./.config/termite ~/.config/
 cp -r ./.config/terminator ~/.config/
+cp -r ./.config/fish ~/.config/
 
 echo "Importing pacman configs..."
 
