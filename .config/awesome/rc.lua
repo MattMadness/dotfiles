@@ -456,3 +456,14 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+
+-- Application Autostart
+awful.spawn.with_shell("blueman-applet")
+awful.spawn.with_shell("xfce4-clipman")
+awful.spawn.with_shell("firewall-applet")
+awful.spawn.with_shell("nm-applet")
+awful.spawn.with_shell("xfce4-power-manager")
+awful.spawn.with_shell("start-pulseaudio-x11")
+awful.spawn.with_shell("xfce4-screensaver")
+awful.spawn.with_shell("xfce4-notifyd")
+awful.spawn.with_shell("compton")
