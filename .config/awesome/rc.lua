@@ -103,6 +103,7 @@ termmenu = {
 
 browsermenu = {
     { "firefox", "firefox" },
+    { "icecat", "icecat" },
     { "brave", "brave" }
 }
 
@@ -460,7 +461,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- Application Autostart
 awful.spawn.with_shell("blueman-applet")
 awful.spawn.with_shell("xfce4-clipman")
-awful.spawn.with_shell("firewall-applet")
+--awful.spawn.with_shell("firewall-applet")
 awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("xfce4-power-manager")
 awful.spawn.with_shell("start-pulseaudio-x11")

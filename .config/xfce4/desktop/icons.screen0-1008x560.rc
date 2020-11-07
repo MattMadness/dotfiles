@@ -5,10 +5,6 @@
 row=3
 col=1
 
-[/home/matthew/Desktop/virt-manager.desktop]
-row=2
-col=3
-
 [/home/matthew/Desktop/geany.desktop]
 row=0
 col=2
@@ -42,7 +38,7 @@ row=1
 col=10
 
 [/home/matthew/Desktop/cherrytree.desktop]
-row=3
+row=2
 col=3
 
 [/home/matthew/Desktop/supertux2.desktop]
@@ -52,10 +48,6 @@ col=9
 [/home/matthew/Desktop/sublime_text.desktop]
 row=1
 col=2
-
-[/home/matthew/Desktop/Legend ofZelda: Majora's Mask.desktop]
-row=2
-col=9
 
 [/home/matthew/Desktop/vlc.desktop]
 row=0
@@ -69,9 +61,13 @@ col=11
 row=3
 col=0
 
-[/home/matthew/Desktop/Undertale.desktop]
+[/home/matthew/Desktop/sauerbraten.desktop]
 row=0
 col=10
+
+[/home/matthew/Desktop/Legend ofZelda: Majora's Mask.desktop]
+row=2
+col=9
 
 [/home/matthew/Desktop/gimp.desktop]
 row=1

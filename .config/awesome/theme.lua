@@ -4,7 +4,7 @@
 
 theme = {}
 
-theme.font          = "Terminus (TTF) 8"
+theme.font          = "Cantarell Bold 8"
 
 theme.bg_normal     = "#181818"
 theme.bg_focus      = "#000000"
@@ -72,7 +72,7 @@ theme.titlebar_maximized_button_focus_inactive  = "/usr/share/awesome/themes/bla
 theme.titlebar_maximized_button_normal_active = "/usr/share/awesome/themes/blackarch/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active  = "/usr/share/awesome/themes/blackarch/titlebar/maximized_focus_active.png"
 
-theme.wallpaper = "/home/matthew/Pictures/mattwallpapers/Dab-Meme-Wallpapers-1024x640.jpg"
+theme.wallpaper = "/home/matthew/Pictures/mattwallpapers/105360.jpg"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = "/usr/share/awesome/themes/blackarch/layouts/fairhw.png"
