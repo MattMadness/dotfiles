@@ -108,10 +108,25 @@ browsermenu = {
 }
 
 editmenu = {
+    { "libreoffice", "libreoffice" },
+    { "texmaker", "texmaker" },
     { "vim", "termite --exec=vim" },
     { "emacs", "emacs" },
     { "sublime", "subl" },
     { "geany", "geany" }
+}
+
+filemenu = {
+    { "thunar", "thunar" },
+    { "bleachbit", "bleachbit"},
+    { "timeshift", "timeshift-launcher" },
+    { "transmission", "transmission-gtk" }
+}
+artmenu = {
+    { "gimp", "gimp" },
+    { "inkscape", "inkscape" },
+    { "darktable", "darktable" },
+    { "ristretto", "ristretto" }
 }
 
 mymainmenu = awful.menu({
@@ -119,7 +134,12 @@ items = {
 		{ "awesome", myawesomemenu, beautiful.awesome_icon },
 		{ "terminals", termmenu },
 		{ "browsers", browsermenu },
+		{ "files", filemenu },
                 { "editing", editmenu },
+		{ "art", artmenu },
+		{ "more..." , "xfce4-appfinder" },
+		{ "lock screen", "xflock4" },
+		{ "shutdown", "shutdown now" }
 	}
 })
 
