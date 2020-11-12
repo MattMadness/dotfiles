@@ -28,8 +28,4 @@ cp -r ./.config/termite ~/.config/
 cp -r ./.config/terminator ~/.config/
 cp -r ./.config/fish ~/.config/
 
-echo "Importing pacman configs..."
-
-sudo cp ./pacman.conf /etc/pacman.conf
-
 echo "Done!"

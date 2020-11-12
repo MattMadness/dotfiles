@@ -13,8 +13,4 @@ cp -r ~/.config/termite ./.config/
 cp -r ~/.config/terminator ./.config/
 cp -r ~/.config/fish ./.config/
 
-echo "Updating pacman configs..."
-
-cp /etc/pacman.conf ./pacman.conf
-
 echo "Done!"
