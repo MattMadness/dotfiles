@@ -5,14 +5,16 @@
     <property name="font" type="string" value="Sans Bold 20"/>
   </property>
   <property name="folders" type="empty">
-    <property name="last-used-media" type="string" value="/home/matthew/Videos"/>
+    <property name="last-used-media" type="string" value="/home/matthew/Videos/Phone/Recordings"/>
   </property>
   <property name="window" type="empty">
     <property name="maximized" type="bool" value="true"/>
     <property name="width" type="int" value="1024"/>
-    <property name="height" type="int" value="565"/>
+    <property name="height" type="int" value="576"/>
   </property>
   <property name="audio" type="empty">
     <property name="volume" type="int" value="50"/>
+    <property name="visualization-enabled" type="bool" value="true"/>
+    <property name="visualization-name" type="string" value="monoscope"/>
   </property>
 </channel>

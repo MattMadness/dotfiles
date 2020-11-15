@@ -1,13 +1,21 @@
 [xfdesktop-version-4.10.3+-rcfile_format]
 4.10.3+=true
 
-[/home/matthew/Desktop/Undertale.desktop]
-row=0
+[/home/matthew/Desktop/org.inkscape.Inkscape.desktop]
+row=3
+col=1
+
+[/home/matthew/Desktop/org.gnome.Nibbles.desktop]
+row=2
 col=10
 
 [/home/matthew/Desktop/geany.desktop]
 row=0
 col=2
+
+[/home/matthew/Desktop/supertuxkart.desktop]
+row=1
+col=9
 
 [/home/matthew/Desktop/Thunderbird.desktop]
 row=0
@@ -17,6 +25,14 @@ col=1
 row=0
 col=11
 
+[/home/matthew/Desktop/org.manjaro.pamac.manager.desktop]
+row=1
+col=3
+
+[/home/matthew/Desktop/timeshift-gtk.desktop]
+row=3
+col=3
+
 [/home/matthew/Desktop/xfce4-taskmanager.desktop]
 row=2
 col=1
@@ -25,9 +41,29 @@ col=1
 row=1
 col=10
 
+[/home/matthew/Desktop/cherrytree.desktop]
+row=2
+col=3
+
+[/home/matthew/Desktop/supertux2.desktop]
+row=0
+col=9
+
 [/home/matthew/Desktop/sublime_text.desktop]
 row=1
 col=2
+
+[/home/matthew/Desktop/dosbox.desktop]
+row=2
+col=11
+
+[/home/matthew/Desktop/vlc.desktop]
+row=0
+col=3
+
+[/home/matthew/Desktop/platformer tutorial.desktop]
+row=0
+col=6
 
 [/home/matthew/Desktop/Half-Life.desktop]
 row=1
@@ -37,9 +73,13 @@ col=11
 row=3
 col=0
 
-[/home/matthew/Desktop/htop.desktop]
-row=3
-col=1
+[/home/matthew/Desktop/sauerbraten.desktop]
+row=0
+col=10
+
+[/home/matthew/Desktop/Legend ofZelda: Majora's Mask.desktop]
+row=2
+col=9
 
 [/home/matthew/Desktop/gimp.desktop]
 row=1

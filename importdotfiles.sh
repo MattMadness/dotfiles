@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "This will overwrite your existing dot configs and pacman configs!"
+echo "This will overwrite your existing dot configs!"
 echo "Remember to look though this script to see what it replaces!"
 echo "Use Ctrl+C within 5 seconds to cancel!"
 sleep 1
@@ -20,12 +20,22 @@ echo "Importing dot configs..."
 cp ./.bashrc ~/.bashrc 
 cp ./.zshrc ~/.zshrc 
 
-cp -r ./.config/xfce4 ~/.config/
-cp -r ./.config/Thunar ~/.config/ 
-cp -r ./.config/awesome ~/.config/
-cp -r ./.config/cairo-dock ~/.config/
-cp -r ./.config/termite ~/.config/
-cp -r ./.config/terminator ~/.config/
-cp -r ./.config/fish ~/.config/
+rm -rfv ~/.config/xfce4/*
+rm -rfv ~/.config/Thunar/*
+rm -rfv ~/.config/awesome/*
+rm -rfv ~/.config/cairo-dock/*
+rm -rfv ~/.config/termite/*
+rm -rfv ~/.config/terminator/*
+rm -rfv ~/.config/fish/*
+rm -rfv ~/.config/picom/*
+
+cp -rv ./.config/xfce4 ~/.config/
+cp -rv ./.config/Thunar ~/.config/ 
+cp -rv ./.config/awesome ~/.config/
+cp -rv ./.config/cairo-dock ~/.config/
+cp -rv ./.config/termite ~/.config/
+cp -rv ./.config/terminator ~/.config/
+cp -rv ./.config/fish ~/.config/
+cp -rv ./.config/picom ~/.config/
 
 echo "Done!"

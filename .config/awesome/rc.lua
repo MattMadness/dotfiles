@@ -10,6 +10,19 @@ local beautiful = require("beautiful")
 -- Notification library
 local naughty = require("naughty")
 local menubar = require("menubar")
+-- Libs needed for window gaps
+local ipairs = ipairs
+local type = type
+local capi = { screen = screen, client = client }
+local tag = require("awful.tag")
+local util = require("awful.util")
+local suit = require("awful.layout.suit")
+local ascreen = require("awful.screen")
+local capi = {
+    screen = screen,
+    awesome = awesome,
+    client = client
+}
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -139,6 +152,7 @@ items = {
 		{ "art", artmenu },
 		{ "more..." , "xfce4-appfinder" },
 		{ "lock screen", "xflock4" },
+		{ "suspend", "loginctl suspend" },
 		{ "shutdown", "shutdown now" }
 	}
 })
@@ -301,7 +315,8 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "n", awful.client.restore),
 
     -- Prompt
-    awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen.index]:run() end),
+    -- awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen.index]:run() end),
+    awful.key({ modkey },            "r",     function () awful.util.spawn("dmenu_run") end),
 
     awful.key({ modkey }, "x",
               function ()
@@ -477,6 +492,7 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+
 
 -- Application Autostart
 awful.spawn.with_shell("blueman-applet")

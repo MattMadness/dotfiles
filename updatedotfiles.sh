@@ -1,16 +1,21 @@
 #!/bin/sh
 
-echo "Updating dot configs..."
+echo "Taking dot files from your home directory and overwriting the existing ones in this folder."
+echo "You have 5 seconds to cancel."
+sleep 5
+
+rm -rfv ./.config/*
 
 cp ~/.bashrc ./.bashrc
 cp ~/.zshrc ./.zshrc
 
-cp -r ~/.config/xfce4 ./.config/
-cp -r ~/.config/Thunar ./.config/
-cp -r ~/.config/awesome ./.config/
-cp -r ~/.config/cairo-dock ./.config/
-cp -r ~/.config/termite ./.config/
-cp -r ~/.config/terminator ./.config/
-cp -r ~/.config/fish ./.config/
+cp -rv ~/.config/xfce4 ./.config/
+cp -rv ~/.config/Thunar ./.config/
+cp -rv ~/.config/awesome ./.config/
+cp -rv ~/.config/cairo-dock ./.config/
+cp -rv ~/.config/termite ./.config/
+cp -rv ~/.config/terminator ./.config/
+cp -rv ~/.config/fish ./.config/
+cp -rv ~/.config/picom ./.config/
 
 echo "Done!"

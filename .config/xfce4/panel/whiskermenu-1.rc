@@ -1,5 +1,5 @@
 favorites=exo-web-browser.desktop,exo-mail-reader.desktop,exo-file-manager.desktop,exo-terminal-emulator.desktop
-recent=timeshift-gtk.desktop,lightdm-gtk-greeter-settings.desktop,xfce4-screenshooter.desktop,connman-gtk.desktop,mpv.desktop,exo-web-browser.desktop,gparted.desktop,libreoffice-startcenter.desktop,rambox.desktop,io.github.Hexchat.desktop
+recent=rhythmbox.desktop,blueman-manager.desktop,mintstick.desktop,galculator.desktop,org.mapeditor.Tiled.desktop,xfce-backdrop-settings.desktop,gufw.desktop,spotify-adblock.desktop,io.github.Hexchat.desktop,armagetronad.desktop
 button-title=\ \ \ Applications\ \ \ 
 button-icon=/home/matthew/.config/xfce4/archlenny.png
 button-single-row=false

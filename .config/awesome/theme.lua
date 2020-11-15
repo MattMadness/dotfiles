@@ -4,7 +4,7 @@
 
 theme = {}
 
-theme.font          = "Cantarell Bold 8"
+theme.font          = "Cantarell Regular 8"
 
 theme.bg_normal     = "#181818"
 theme.bg_focus      = "#000000"
@@ -17,7 +17,7 @@ theme.fg_focus      = "#6298e0"
 theme.fg_urgent     = "#6298e0"
 theme.fg_minimize   = "#000000"
 
-theme.border_width  = 1
+theme.border_width  = 1 
 theme.border_normal = "#6298e0"
 theme.border_focus  = "#316ab7"
 theme.border_marked = "#91231c"
