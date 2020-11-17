@@ -9,11 +9,11 @@
   </property>
   <property name="window" type="empty">
     <property name="maximized" type="bool" value="true"/>
-    <property name="width" type="int" value="1024"/>
-    <property name="height" type="int" value="576"/>
+    <property name="width" type="int" value="1022"/>
+    <property name="height" type="int" value="578"/>
   </property>
   <property name="audio" type="empty">
-    <property name="volume" type="int" value="50"/>
+    <property name="volume" type="int" value="55"/>
     <property name="visualization-enabled" type="bool" value="true"/>
     <property name="visualization-name" type="string" value="monoscope"/>
   </property>

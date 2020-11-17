@@ -8,10 +8,10 @@
       <property name="position" type="string" value="p=6;x=512;y=12"/>
       <property name="length" type="uint" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
-      <property name="size" type="uint" value="24"/>
+      <property name="size" type="uint" value="23"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="1"/>
-        <value type="int" value="14"/>
+        <value type="int" value="12"/>
         <value type="int" value="2"/>
         <value type="int" value="7"/>
         <value type="int" value="6"/>
@@ -118,14 +118,16 @@
         <property name="max-texts-in-history" type="uint" value="5"/>
       </property>
     </property>
-    <property name="plugin-14" type="string" value="pager">
-      <property name="rows" type="uint" value="1"/>
-    </property>
     <property name="plugin-2" type="string" value="tasklist">
       <property name="show-handle" type="bool" value="false"/>
       <property name="include-all-workspaces" type="bool" value="false"/>
       <property name="show-labels" type="bool" value="true"/>
       <property name="sort-order" type="uint" value="4"/>
+      <property name="flat-buttons" type="bool" value="false"/>
+    </property>
+    <property name="plugin-12" type="string" value="pager">
+      <property name="rows" type="uint" value="1"/>
+      <property name="miniature-view" type="bool" value="true"/>
     </property>
   </property>
 </channel>

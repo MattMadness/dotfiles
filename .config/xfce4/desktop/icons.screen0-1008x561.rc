@@ -17,16 +17,16 @@ col=9
 row=0
 col=1
 
-[/home/matthew/Desktop/Fallout.desktop]
-row=0
-col=11
-
 [/home/matthew/Desktop/org.manjaro.pamac.manager.desktop]
 row=1
 col=3
 
+[/home/matthew/Desktop/Fallout.desktop]
+row=0
+col=11
+
 [/home/matthew/Desktop/timeshift-gtk.desktop]
-row=3
+row=2
 col=3
 
 [/home/matthew/Desktop/xfce4-taskmanager.desktop]
@@ -42,7 +42,7 @@ row=1
 col=10
 
 [/home/matthew/Desktop/cherrytree.desktop]
-row=2
+row=3
 col=3
 
 [/home/matthew/Desktop/vlc.desktop]
@@ -65,8 +65,8 @@ col=1
 row=0
 col=6
 
-[/home/matthew/Desktop/Half-Life.desktop]
-row=1
+[/home/matthew/Desktop/dosbox.desktop]
+row=2
 col=11
 
 [/home/matthew/Desktop/exo-file-manager.desktop]
@@ -77,8 +77,8 @@ col=0
 row=0
 col=10
 
-[/home/matthew/Desktop/dosbox.desktop]
-row=2
+[/home/matthew/Desktop/Half-Life.desktop]
+row=1
 col=11
 
 [/home/matthew/Desktop/gimp.desktop]

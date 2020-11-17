@@ -18,8 +18,8 @@ row=0
 col=1
 
 [/home/matthew/Desktop/Fallout.desktop]
-row=0
-col=11
+row=4
+col=0
 
 [/home/matthew/Desktop/org.manjaro.pamac.manager.desktop]
 row=1
@@ -66,8 +66,8 @@ row=0
 col=6
 
 [/home/matthew/Desktop/Half-Life.desktop]
-row=1
-col=11
+row=5
+col=0
 
 [/home/matthew/Desktop/exo-file-manager.desktop]
 row=3
@@ -78,8 +78,8 @@ row=0
 col=10
 
 [/home/matthew/Desktop/dosbox.desktop]
-row=2
-col=11
+row=4
+col=1
 
 [/home/matthew/Desktop/gimp.desktop]
 row=1
