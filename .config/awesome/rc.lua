@@ -317,7 +317,8 @@ globalkeys = awful.util.table.join(
     -- Prompt
     -- awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen.index]:run() end),
     awful.key({ modkey },            "r",     function () awful.util.spawn("dmenu_run") end),
-
+    awful.key({ modkey },            "e",     function () awful.util.spawn("passmenu") end),
+    
     awful.key({ modkey }, "x",
               function ()
                   awful.prompt.run({ prompt = "Run Lua code: " },
@@ -496,7 +497,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- Application Autostart
 awful.spawn.with_shell("blueman-applet")
-awful.spawn.with_shell("xfce4-clipman")
 --awful.spawn.with_shell("firewall-applet")
 --awful.spawn.with_shell("nm-applet")
 awful.spawn.with_shell("connman-gtk --tray")

@@ -23,8 +23,8 @@
       <property name="Reflection" type="string" value="0"/>
       <property name="Primary" type="bool" value="false"/>
       <property name="Position" type="empty">
-        <property name="X" type="int" value="153"/>
-        <property name="Y" type="int" value="768"/>
+        <property name="X" type="int" value="0"/>
+        <property name="Y" type="int" value="168"/>
       </property>
     </property>
     <property name="VIRTUAL1" type="string" value="VIRTUAL1">
@@ -47,9 +47,9 @@
       <property name="RefreshRate" type="double" value="60.015162"/>
       <property name="Rotation" type="int" value="0"/>
       <property name="Reflection" type="string" value="0"/>
-      <property name="Primary" type="bool" value="true"/>
+      <property name="Primary" type="bool" value="false"/>
       <property name="Position" type="empty">
-        <property name="X" type="int" value="0"/>
+        <property name="X" type="int" value="1024"/>
         <property name="Y" type="int" value="0"/>
       </property>
     </property>
@@ -65,8 +65,8 @@
       <property name="Reflection" type="string" value="0"/>
       <property name="Primary" type="bool" value="false"/>
       <property name="Position" type="empty">
-        <property name="X" type="int" value="153"/>
-        <property name="Y" type="int" value="768"/>
+        <property name="X" type="int" value="0"/>
+        <property name="Y" type="int" value="168"/>
       </property>
     </property>
     <property name="VIRTUAL1" type="string" value="VIRTUAL1">
@@ -89,9 +89,9 @@
       <property name="RefreshRate" type="double" value="60.015162"/>
       <property name="Rotation" type="int" value="0"/>
       <property name="Reflection" type="string" value="0"/>
-      <property name="Primary" type="bool" value="true"/>
+      <property name="Primary" type="bool" value="false"/>
       <property name="Position" type="empty">
-        <property name="X" type="int" value="0"/>
+        <property name="X" type="int" value="1024"/>
         <property name="Y" type="int" value="0"/>
       </property>
     </property>
