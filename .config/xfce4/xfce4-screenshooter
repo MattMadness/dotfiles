@@ -2,7 +2,7 @@ app=ristretto
 last_user=
 screenshot_dir=file:/home/matthew/Pictures/Screenshots
 action=8
-delay=0
+delay=5
 region=1
 show_mouse=0
 
