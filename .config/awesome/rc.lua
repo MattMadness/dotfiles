@@ -117,7 +117,9 @@ termmenu = {
 browsermenu = {
     { "firefox", "firefox" },
     { "icecat", "icecat" },
-    { "brave", "brave" }
+    { "brave", "brave" },
+    { "librewolf", "librewolf" },
+    { "pale moon", "palemoon" }
 }
 
 editmenu = {

@@ -23,7 +23,7 @@ theme.border_focus  = "#316ab7"
 theme.border_marked = "#91231c"
 
 -- Useless gaps
-theme.useless_gap = 5
+theme.useless_gap = 2.5
 
 -- There are other variable sets
 -- overriding the blackarch one when

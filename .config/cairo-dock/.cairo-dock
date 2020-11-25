@@ -1,6 +1,6 @@
 [Launch]
 last version=3.4.1
-default backend=
+default backend=opengl
 last year=0
 
 ping server=true
