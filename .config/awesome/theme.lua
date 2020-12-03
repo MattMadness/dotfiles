@@ -75,7 +75,7 @@ theme.titlebar_maximized_button_focus_inactive  = "/usr/share/awesome/themes/bla
 theme.titlebar_maximized_button_normal_active = "/usr/share/awesome/themes/blackarch/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active  = "/usr/share/awesome/themes/blackarch/titlebar/maximized_focus_active.png"
 
-theme.wallpaper = "/home/matthew/Pictures/mattwallpapers/105360.jpg"
+theme.wallpaper = "/usr/share/wallpapers/GradientGlowBlue.jpg"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = "/usr/share/awesome/themes/blackarch/layouts/fairhw.png"
@@ -91,7 +91,7 @@ theme.layout_tiletop = "/usr/share/awesome/themes/blackarch/layouts/tiletopw.png
 theme.layout_spiral  = "/usr/share/awesome/themes/blackarch/layouts/spiralw.png"
 theme.layout_dwindle = "/usr/share/awesome/themeslayouts/dwindlew.png"
 
-theme.awesome_icon = "/usr/share/awesome/themes/blackarch/blackarch.png"
+theme.awesome_icon = "/usr/share/icons/candy-icons/apps/scalable/distributor-logo-artix.svg"
 
 -- Define the icon theme for application icons. If not set then the icons
 -- from /usr/share/icons and /usr/share/icons/hicolor will be used.

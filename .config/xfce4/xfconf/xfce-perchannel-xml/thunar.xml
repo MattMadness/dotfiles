@@ -10,8 +10,8 @@
   <property name="last-window-height" type="int" value="568"/>
   <property name="last-window-maximized" type="bool" value="false"/>
   <property name="last-show-hidden" type="bool" value="false"/>
-  <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_38_PERCENT"/>
-  <property name="last-details-view-column-widths" type="string" value="50,105,50,50,513,50,50,62,50,115"/>
+  <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_50_PERCENT"/>
+  <property name="last-details-view-column-widths" type="string" value="50,105,50,50,473,50,50,60,50,157"/>
   <property name="last-sort-column" type="string" value="THUNAR_COLUMN_NAME"/>
   <property name="last-sort-order" type="string" value="GTK_SORT_ASCENDING"/>
   <property name="last-side-pane" type="string" value="ThunarTreePane"/>
@@ -19,7 +19,7 @@
   <property name="tree-icon-size" type="string" value="THUNAR_ICON_SIZE_16"/>
   <property name="shortcuts-icon-emblems" type="bool" value="true"/>
   <property name="misc-text-beside-icons" type="bool" value="true"/>
-  <property name="misc-show-delete-action" type="bool" value="false"/>
+  <property name="misc-show-delete-action" type="bool" value="true"/>
   <property name="misc-folders-first" type="bool" value="true"/>
   <property name="misc-file-size-binary" type="bool" value="true"/>
   <property name="tree-icon-emblems" type="bool" value="false"/>
