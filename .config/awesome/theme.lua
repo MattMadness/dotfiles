@@ -1,5 +1,5 @@
 ---------------------------
--- blackarch awesome theme --
+-- matthew awesome theme --
 ---------------------------
 
 theme = {}
@@ -13,13 +13,13 @@ theme.bg_minimize   = "#444444"
 theme.bg_systray    = theme.bg_normal
 
 theme.fg_normal     = "#aaaaaa"
-theme.fg_focus      = "#6298e0"
-theme.fg_urgent     = "#6298e0"
+theme.fg_focus      = "#e06567"
+theme.fg_urgent     = "#e06567"
 theme.fg_minimize   = "#000000"
 
 theme.border_width  = 1 
-theme.border_normal = "#6298e0"
-theme.border_focus  = "#316ab7"
+theme.border_normal = "#e06163"
+theme.border_focus  = "#e06163"
 theme.border_marked = "#91231c"
 
 -- Useless gaps
@@ -36,13 +36,13 @@ theme.useless_gap = 2.5
 --theme.taglist_bg_focus = "#ff0000"
 
 -- Display the taglist squares
-theme.taglist_squares_sel   = "/usr/share/awesome/themes/blackarch/taglist/squarefw.png"
-theme.taglist_squares_unsel = "/usr/share/awesome/themes/blackarch/taglist/squarew.png"
+theme.taglist_squares_sel   = "/home/matthew/.config/awesome/taglist/squarefw.png"
+theme.taglist_squares_unsel = "/home/matthew/.config/awesome/taglist/squarew.png"
 
 -- Variables set for theming the menu:
 -- menu_[bg|fg]_[normal|focus]
 -- menu_[border_color|border_width]
-theme.menu_submenu_icon = "/usr/share/awesome/themes/blackarch/submenu.png"
+theme.menu_submenu_icon = "/home/matthew/.config/awesome/submenu.png"
 theme.menu_height = 15
 theme.menu_width  = 100
 
@@ -52,46 +52,46 @@ theme.menu_width  = 100
 --theme.bg_widget = "#cc0000"
 
 -- Define the image to load
-theme.titlebar_close_button_normal = "/usr/share/awesome/themes/blackarch/titlebar/close_normal.png"
-theme.titlebar_close_button_focus  = "/usr/share/awesome/themes/blackarch/titlebar/close_focus.png"
+theme.titlebar_close_button_normal = "/home/matthew/.config/awesome/titlebar/close_normal.png"
+theme.titlebar_close_button_focus  = "/home/matthew/.config/awesome/titlebar/close_focus.png"
 
-theme.titlebar_ontop_button_normal_inactive = "/usr/share/awesome/themes/blackarch/titlebar/ontop_normal_inactive.png"
-theme.titlebar_ontop_button_focus_inactive  = "/usr/share/awesome/themes/blackarch/titlebar/ontop_focus_inactive.png"
-theme.titlebar_ontop_button_normal_active = "/usr/share/awesome/themes/blackarch/titlebar/ontop_normal_active.png"
-theme.titlebar_ontop_button_focus_active  = "/usr/share/awesome/themes/blackarch/titlebar/ontop_focus_active.png"
+theme.titlebar_ontop_button_normal_inactive = "/home/matthew/.config/awesome/titlebar/ontop_normal_inactive.png"
+theme.titlebar_ontop_button_focus_inactive  = "/home/matthew/.config/awesome/titlebar/ontop_focus_inactive.png"
+theme.titlebar_ontop_button_normal_active = "/home/matthew/.config/awesome/titlebar/ontop_normal_active.png"
+theme.titlebar_ontop_button_focus_active  = "/home/matthew/.config/awesome/titlebar/ontop_focus_active.png"
 
-theme.titlebar_sticky_button_normal_inactive = "/usr/share/awesome/themes/blackarch/titlebar/sticky_normal_inactive.png"
-theme.titlebar_sticky_button_focus_inactive  = "/usr/share/awesome/themes/blackarch/titlebar/sticky_focus_inactive.png"
-theme.titlebar_sticky_button_normal_active = "/usr/share/awesome/themes/blackarch/titlebar/sticky_normal_active.png"
-theme.titlebar_sticky_button_focus_active  = "/usr/share/awesome/themes/blackarch/titlebar/sticky_focus_active.png"
+theme.titlebar_sticky_button_normal_inactive = "/home/matthew/.config/awesome/titlebar/sticky_normal_inactive.png"
+theme.titlebar_sticky_button_focus_inactive  = "/home/matthew/.config/awesome/titlebar/sticky_focus_inactive.png"
+theme.titlebar_sticky_button_normal_active = "/home/matthew/.config/awesome/titlebar/sticky_normal_active.png"
+theme.titlebar_sticky_button_focus_active  = "/home/matthew/.config/awesome/titlebar/sticky_focus_active.png"
 
-theme.titlebar_floating_button_normal_inactive = "/usr/share/awesome/themes/blackarch/titlebar/floating_normal_inactive.png"
-theme.titlebar_floating_button_focus_inactive  = "/usr/share/awesome/themes/blackarch/titlebar/floating_focus_inactive.png"
-theme.titlebar_floating_button_normal_active = "/usr/share/awesome/themes/blackarch/titlebar/floating_normal_active.png"
-theme.titlebar_floating_button_focus_active  = "/usr/share/awesome/themes/blackarch/titlebar/floating_focus_active.png"
+theme.titlebar_floating_button_normal_inactive = "/home/matthew/.config/awesome/titlebar/floating_normal_inactive.png"
+theme.titlebar_floating_button_focus_inactive  = "/home/matthew/.config/awesome/titlebar/floating_focus_inactive.png"
+theme.titlebar_floating_button_normal_active = "/home/matthew/.config/awesome/titlebar/floating_normal_active.png"
+theme.titlebar_floating_button_focus_active  = "/home/matthew/.config/awesome/titlebar/floating_focus_active.png"
 
-theme.titlebar_maximized_button_normal_inactive = "/usr/share/awesome/themes/blackarch/titlebar/maximized_normal_inactive.png"
-theme.titlebar_maximized_button_focus_inactive  = "/usr/share/awesome/themes/blackarch/titlebar/maximized_focus_inactive.png"
-theme.titlebar_maximized_button_normal_active = "/usr/share/awesome/themes/blackarch/titlebar/maximized_normal_active.png"
-theme.titlebar_maximized_button_focus_active  = "/usr/share/awesome/themes/blackarch/titlebar/maximized_focus_active.png"
+theme.titlebar_maximized_button_normal_inactive = "/home/matthew/.config/awesome/titlebar/maximized_normal_inactive.png"
+theme.titlebar_maximized_button_focus_inactive  = "/home/matthew/.config/awesome/titlebar/maximized_focus_inactive.png"
+theme.titlebar_maximized_button_normal_active = "/home/matthew/.config/awesome/titlebar/maximized_normal_active.png"
+theme.titlebar_maximized_button_focus_active  = "/home/matthew/.config/awesome/titlebar/maximized_focus_active.png"
 
-theme.wallpaper = "/usr/share/wallpapers/GradientGlowBlue.jpg"
+theme.wallpaper = "/home/matthew/.config/awesome/wallpaper.jpg"
 
 -- You can use your own layout icons like this:
-theme.layout_fairh = "/usr/share/awesome/themes/blackarch/layouts/fairhw.png"
-theme.layout_fairv = "/usr/share/awesome/themes/blackarch/layouts/fairvw.png"
-theme.layout_floating  = "/usr/share/awesome/themes/blackarch/layouts/floatingw.png"
-theme.layout_magnifier = "/usr/share/awesome/themes/blackarch/layouts/magnifierw.png"
-theme.layout_max = "/usr/share/awesome/themes/blackarch/layouts/maxw.png"
-theme.layout_fullscreen = "/usr/share/awesome/themes/blackarch/layouts/fullscreenw.png"
-theme.layout_tilebottom = "/usr/share/awesome/themes/blackarch/layouts/tilebottomw.png"
-theme.layout_tileleft   = "/usr/share/awesome/themes/blackarch/layouts/tileleftw.png"
-theme.layout_tile = "/usr/share/awesome/themes/blackarch/layouts/tilew.png"
-theme.layout_tiletop = "/usr/share/awesome/themes/blackarch/layouts/tiletopw.png"
-theme.layout_spiral  = "/usr/share/awesome/themes/blackarch/layouts/spiralw.png"
+theme.layout_fairh = "/home/matthew/.config/awesome/layouts/fairhw.png"
+theme.layout_fairv = "/home/matthew/.config/awesome/layouts/fairvw.png"
+theme.layout_floating  = "/home/matthew/.config/awesome/layouts/floatingw.png"
+theme.layout_magnifier = "/home/matthew/.config/awesome/layouts/magnifierw.png"
+theme.layout_max = "/home/matthew/.config/awesome/layouts/maxw.png"
+theme.layout_fullscreen = "/home/matthew/.config/awesome/layouts/fullscreenw.png"
+theme.layout_tilebottom = "/home/matthew/.config/awesome/layouts/tilebottomw.png"
+theme.layout_tileleft   = "/home/matthew/.config/awesome/layouts/tileleftw.png"
+theme.layout_tile = "/home/matthew/.config/awesome/layouts/tilew.png"
+theme.layout_tiletop = "/home/matthew/.config/awesome/layouts/tiletopw.png"
+theme.layout_spiral  = "/home/matthew/.config/awesome/layouts/spiralw.png"
 theme.layout_dwindle = "/usr/share/awesome/themeslayouts/dwindlew.png"
 
-theme.awesome_icon = "/usr/share/icons/candy-icons/apps/scalable/distributor-logo-artix.svg"
+theme.awesome_icon = "/home/matthew/.config/awesome/redartix.png"
 
 -- Define the icon theme for application icons. If not set then the icons
 -- from /usr/share/icons and /usr/share/icons/hicolor will be used.
