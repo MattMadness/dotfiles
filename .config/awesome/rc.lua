@@ -24,6 +24,9 @@ local capi = {
     client = client
 }
 
+-- Run picom for sexiness
+awful.spawn.with_shell("picom")
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -510,6 +513,5 @@ awful.spawn.with_shell("xfce4-power-manager")
 awful.spawn.with_shell("start-pulseaudio-x11")
 awful.spawn.with_shell("xfce4-screensaver")
 awful.spawn.with_shell("xfce4-notifyd")
---awful.spawn.with_shell("compton")
 awful.spawn.with_shell("pasystray")
 awful.spawn.with_shell("polkit-gnome-authentication-agent-1")
