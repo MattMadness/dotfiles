@@ -114,7 +114,9 @@ myawesomemenu = {
 
 termmenu = {
     { "termite", "termite" },
-    { "terminator", "terminator" }
+    { "terminator", "terminator" },
+    { "xfceterm", "xfce4-terminal" },
+    { "xterm", "xterm" }
 }
 
 browsermenu = {
@@ -135,6 +137,7 @@ editmenu = {
 }
 
 filemenu = {
+    { "pcmanfm", "pcmanfm" },
     { "thunar", "thunar" },
     { "bleachbit", "bleachbit"},
     { "timeshift", "timeshift-launcher" },
@@ -156,9 +159,11 @@ items = {
                 { "editing", editmenu },
 		{ "art", artmenu },
 		{ "more..." , "xfce4-appfinder" },
+		--{ "lock screen", "xscreensaver-command --activate" },
 		{ "lock screen", "xflock4" },
+		--{ "lock screen", "light-locker --activate" },
 		{ "suspend", "loginctl suspend" },
-		{ "shutdown", "shutdown now" }
+		{ "shutdown", "loginctl poweroff" }
 	}
 })
 
@@ -273,6 +278,11 @@ root.buttons(awful.util.table.join(
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
+    -- Volume Control 
+    awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer -D pulse sset Master 2%+", false) end),
+    awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("amixer -D pulse sset Master 2%-", false) end),
+    awful.key({}, "XF86AudioMute", function () awful.util.spawn("amixer -D pulse sset Master toggle", false) end),
+    -- Window Control
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
@@ -507,11 +517,14 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- Application Autostart
 awful.spawn.with_shell("blueman-applet")
 --awful.spawn.with_shell("firewall-applet")
---awful.spawn.with_shell("nm-applet")
-awful.spawn.with_shell("connman-gtk --tray")
+awful.spawn.with_shell("nm-applet")
+--awful.spawn.with_shell("lxsession")
+--awful.spawn.with_shell("connman-gtk --tray")
 awful.spawn.with_shell("xfce4-power-manager")
 awful.spawn.with_shell("start-pulseaudio-x11")
 awful.spawn.with_shell("xfce4-screensaver")
+--awful.spawn.with_shell("xscreensaver")
+--awful.spawn.with_shell("light-locker")
 awful.spawn.with_shell("xfce4-notifyd")
 awful.spawn.with_shell("pasystray")
-awful.spawn.with_shell("polkit-gnome-authentication-agent-1")
+awful.spawn.with_shell("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")

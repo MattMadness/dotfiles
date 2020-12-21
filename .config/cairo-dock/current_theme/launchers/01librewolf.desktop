@@ -47,4 +47,4 @@ Order=1
 
 Icon Type=0
 Type=Application
-Origin=/usr/share/applications/firefox.desktop;iceweasel.desktop;chromium-browser.desktop;rekonq.desktop;konqueror.desktop;konqbrowser.desktop
+Origin=/usr/share/applications/librewolf.desktop
