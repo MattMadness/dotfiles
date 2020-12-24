@@ -4,7 +4,8 @@
 
 theme = {}
 
-theme.font          = "Cantarell Regular 8"
+--theme.font          = "Cantarell Regular 8"
+theme.font          = "UbuntuMono Nerd Font Regular 9"
 
 theme.bg_normal     = "#181818"
 theme.bg_focus      = "#000000"
@@ -91,7 +92,7 @@ theme.layout_tiletop = "/home/matthew/.config/awesome/layouts/tiletopw.png"
 theme.layout_spiral  = "/home/matthew/.config/awesome/layouts/spiralw.png"
 theme.layout_dwindle = "/usr/share/awesome/themeslayouts/dwindlew.png"
 
-theme.awesome_icon = "/home/matthew/.config/awesome/redartix.png"
+theme.awesome_icon = "/home/matthew/.config/awesome/icon.png"
 
 -- Define the icon theme for application icons. If not set then the icons
 -- from /usr/share/icons and /usr/share/icons/hicolor will be used.
