@@ -6,14 +6,14 @@
   <property name="misc-single-click" type="bool" value="false"/>
   <property name="last-location-bar" type="string" value="ThunarLocationEntry"/>
   <property name="last-separator-position" type="int" value="216"/>
-  <property name="last-window-width" type="int" value="502"/>
+  <property name="last-window-width" type="int" value="1012"/>
   <property name="last-window-height" type="int" value="570"/>
   <property name="last-window-maximized" type="bool" value="false"/>
   <property name="last-show-hidden" type="bool" value="false"/>
   <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_50_PERCENT"/>
-  <property name="last-details-view-column-widths" type="string" value="50,99,50,50,176,50,50,57,50,143"/>
+  <property name="last-details-view-column-widths" type="string" value="50,99,50,50,496,50,50,57,50,143"/>
   <property name="last-sort-column" type="string" value="THUNAR_COLUMN_NAME"/>
-  <property name="last-sort-order" type="string" value="GTK_SORT_ASCENDING"/>
+  <property name="last-sort-order" type="string" value="GTK_SORT_DESCENDING"/>
   <property name="last-side-pane" type="string" value="ThunarTreePane"/>
   <property name="shortcuts-icon-size" type="string" value="THUNAR_ICON_SIZE_16"/>
   <property name="tree-icon-size" type="string" value="THUNAR_ICON_SIZE_16"/>
