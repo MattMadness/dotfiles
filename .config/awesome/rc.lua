@@ -345,6 +345,8 @@ globalkeys = awful.util.table.join(
               end,
               {description = "lua execute prompt", group = "awesome"}),
 
+    -- Spawn Brave
+    awful.key({ modkey }, "b", function () awful.util.spawn("brave") end),
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end)
 )

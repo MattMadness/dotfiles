@@ -141,7 +141,4 @@
   <property name="Notify" type="bool" value="false"/>
   <property name="AutoEnableProfiles" type="bool" value="true"/>
   <property name="IdentityPopups" type="bool" value="false"/>
-  <property name="Schemes" type="empty">
-    <property name="Apply" type="string" value="Default"/>
-  </property>
 </channel>
