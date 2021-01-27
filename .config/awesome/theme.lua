@@ -4,8 +4,8 @@
 
 theme = {}
 
---theme.font          = "Cantarell Regular 8"
-theme.font          = "UbuntuMono Nerd Font Regular 9"
+theme.font          = "Cantarell Regular 8"
+--theme.font          = "UbuntuMono Nerd Font Regular 9"
 
 theme.bg_normal     = "#181818"
 theme.bg_focus      = "#000000"

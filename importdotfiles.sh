@@ -20,7 +20,6 @@ echo "Importing dot configs..."
 cp ./.bashrc ~/.bashrc 
 cp ./.zshrc ~/.zshrc 
 
-rm -rfv ~/.config/xfce4/*
 rm -rfv ~/.config/Thunar/*
 rm -rfv ~/.config/awesome/*
 rm -rfv ~/.config/cairo-dock/*
@@ -29,7 +28,6 @@ rm -rfv ~/.config/terminator/*
 rm -rfv ~/.config/fish/*
 rm -rfv ~/.config/picom/*
 
-cp -rv ./.config/xfce4 ~/.config/
 cp -rv ./.config/Thunar ~/.config/ 
 cp -rv ./.config/awesome ~/.config/
 cp -rv ./.config/cairo-dock ~/.config/

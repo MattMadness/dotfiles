@@ -9,7 +9,6 @@ rm -rfv ./.config/*
 cp ~/.bashrc ./.bashrc
 cp ~/.zshrc ./.zshrc
 
-cp -rv ~/.config/xfce4 ./.config/
 cp -rv ~/.config/Thunar ./.config/
 cp -rv ~/.config/awesome ./.config/
 cp -rv ~/.config/cairo-dock ./.config/
