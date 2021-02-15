@@ -1,5 +1,5 @@
 # name: Mad Man
-# author: Lily Ballard
+# author: Matthew Evan
 
 function fish_prompt --description 'Write out the prompt'
     set -l last_pipestatus $pipestatus

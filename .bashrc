@@ -43,8 +43,8 @@ ALERT="${BWhite}${On_Red}" # Bold White on red background
 # Useful aliases
 alias c='clear'
 alias ..='cd ..'
-alias ls='lsd -l --color=auto'
-alias lsm="lsd -al --color=auto"
+alias ls='ls -l --color=auto'
+alias lsm="ls -al --color=auto"
 alias mkdir='mkdir -pv'
 alias free='free -mt'
 alias ps='ps auxf'
