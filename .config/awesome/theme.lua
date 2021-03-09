@@ -4,8 +4,8 @@
 
 theme = {}
 
-theme.font          = "Cantarell Regular 8"
---theme.font          = "UbuntuMono Nerd Font Regular 9"
+theme.font          = "Fira Code Nerd Font Regular 9"
+--theme.font          = "UbuntuMono Nerd Font Regular 8"
 
 theme.bg_normal     = "#181818"
 theme.bg_focus      = "#000000"
@@ -18,7 +18,7 @@ theme.fg_focus      = "#e06567"
 theme.fg_urgent     = "#e06567"
 theme.fg_minimize   = "#000000"
 
-theme.border_width  = 1 
+theme.border_width  = 0
 theme.border_normal = "#e06163"
 theme.border_focus  = "#e06163"
 theme.border_marked = "#91231c"
