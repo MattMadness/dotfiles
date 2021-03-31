@@ -333,6 +333,8 @@ globalkeys = awful.util.table.join(
     -- awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen.index]:run() end),
     awful.key({ modkey },            "r",     function () awful.util.spawn("dmenu_run") end),
     awful.key({ modkey },            "e",     function () awful.util.spawn("passmenu") end),
+    awful.key({ modkey },            "i",     function () awful.util.spawn("mansplain") end),
+
     
     awful.key({ modkey }, "x",
               function ()

@@ -4,7 +4,7 @@
 
 theme = {}
 
-theme.font          = "Fira Code Nerd Font Regular 9"
+theme.font          = "Fira Code Nerd Font Regular 10"
 --theme.font          = "UbuntuMono Nerd Font Regular 8"
 
 theme.bg_normal     = "#181818"
@@ -14,17 +14,17 @@ theme.bg_minimize   = "#444444"
 theme.bg_systray    = theme.bg_normal
 
 theme.fg_normal     = "#aaaaaa"
-theme.fg_focus      = "#e06567"
-theme.fg_urgent     = "#e06567"
+theme.fg_focus      = "#a765e0"
+theme.fg_urgent     = "#a765e0"
 theme.fg_minimize   = "#000000"
 
 theme.border_width  = 0
 theme.border_normal = "#e06163"
 theme.border_focus  = "#e06163"
-theme.border_marked = "#91231c"
+theme.border_marked = "#4a1c91"
 
 -- Useless gaps
-theme.useless_gap = 2.5
+theme.useless_gap = 5
 
 -- There are other variable sets
 -- overriding the blackarch one when
@@ -44,8 +44,8 @@ theme.taglist_squares_unsel = "/home/matthew/.config/awesome/taglist/squarew.png
 -- menu_[bg|fg]_[normal|focus]
 -- menu_[border_color|border_width]
 theme.menu_submenu_icon = "/home/matthew/.config/awesome/submenu.png"
-theme.menu_height = 15
-theme.menu_width  = 100
+theme.menu_height = 20
+theme.menu_width  = 200
 
 -- You can add as many variables as
 -- you wish and access them by using

@@ -95,6 +95,6 @@ pfetch
 # Set PATH so it includes user's private bin directories
 PATH="${HOME}/bin:${HOME}/.local/bin:${PATH}"
 
-PS1="${Red}[${Cyan}\u@\h${Red}]${NC}: ${Red}\w${NC} \\$ "
+PS1="${Red}[${Cyan}\u${Yellow}@${Green}\h${Red}]${NC}: ${Red}\w${NC} \\$ "
 
 
