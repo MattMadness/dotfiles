@@ -1,0 +1,27 @@
+[xfdesktop-version-4.10.3+-rcfile_format]
+4.10.3+=true
+
+[/home/matthew/Desktop/Bethesda.net Launcher.desktop]
+row=0
+col=1
+
+[/home/matthew/Desktop/tkpacman.desktop]
+row=3
+col=0
+
+[/home/matthew/Desktop/WorldsPlayer Win7.desktop]
+row=1
+col=1
+
+[/home/matthew/Desktop/exo-file-manager.desktop]
+row=2
+col=0
+
+[/home/matthew/Desktop/firefox.desktop]
+row=1
+col=0
+
+[Trash]
+row=0
+col=0
+

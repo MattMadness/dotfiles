@@ -10,22 +10,6 @@ local beautiful = require("beautiful")
 -- Notification library
 local naughty = require("naughty")
 local menubar = require("menubar")
--- Libs needed for window gaps
-local ipairs = ipairs
-local type = type
-local capi = { screen = screen, client = client }
-local tag = require("awful.tag")
-local util = require("awful.util")
-local suit = require("awful.layout.suit")
-local ascreen = require("awful.screen")
-local capi = {
-    screen = screen,
-    awesome = awesome,
-    client = client
-}
-
--- Run picom for sexiness
-awful.spawn.with_shell("picom")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -54,10 +38,10 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
-beautiful.init("/home/matthew/.config/awesome/theme.lua")
+beautiful.init("/usr/share/awesome/themes/blackarch/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "konsole"
+terminal = "xfce4-terminal"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -99,7 +83,7 @@ end
 tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
-    tags[s] = awful.tag({ "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  " }, s, layouts[1])
+    tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, layouts[1])
 end
 -- }}}
 
@@ -113,42 +97,21 @@ myawesomemenu = {
 }
 
 termmenu = {
-    { "konsole", "konsole" },
-    { "termite", "termite" },
-    { "terminator", "terminator" },
-    { "xfceterm", "xfce4-terminal" },
-    { "xterm", "xterm" }
+    { "term (grey)", "urxvt -bg black -fg grey" },
+    { "term (red)", "urxvt -bg black -fg red" },
+    { "term (green)", "urxvt -bg black -fg green" },
+    { "term (yellow)", "urxvt -bg black -fg yellow" },
+    { "term (white)", "urxvt -bg black -fg white" }
 }
 
 browsermenu = {
     { "firefox", "firefox" },
-    { "icecat", "icecat" },
-    { "brave", "brave" },
-    { "librewolf", "librewolf" },
-    { "pale moon", "palemoon" }
+    { "chromium", "chromium" }
 }
 
-editmenu = {
-    { "libreoffice", "libreoffice" },
-    { "texmaker", "texmaker" },
-    { "vim", "termite --exec=vim" },
-    { "emacs", "emacs" },
-    { "sublime", "subl" },
-    { "geany", "geany" }
-}
-
-filemenu = {
-    { "pcmanfm", "pcmanfm" },
-    { "thunar", "thunar" },
-    { "bleachbit", "bleachbit"},
-    { "timeshift", "timeshift-launcher" },
-    { "transmission", "transmission-gtk" }
-}
-artmenu = {
-    { "gimp", "gimp" },
-    { "inkscape", "inkscape" },
-    { "darktable", "darktable" },
-    { "ristretto", "ristretto" }
+networkmenu = {
+    { "wifi-radar", "wifi-radar" },
+    { "wifi-radar-polkit", "wifi-radar-polkit" }
 }
 
 mymainmenu = awful.menu({
@@ -156,15 +119,7 @@ items = {
 		{ "awesome", myawesomemenu, beautiful.awesome_icon },
 		{ "terminals", termmenu },
 		{ "browsers", browsermenu },
-		{ "files", filemenu },
-                { "editing", editmenu },
-		{ "art", artmenu },
-		{ "more..." , "xfce4-appfinder" },
-		--{ "lock screen", "xscreensaver-command --activate" },
-		{ "lock screen", "xflock4" },
-		--{ "lock screen", "light-locker --activate" },
-		{ "suspend", "loginctl suspend" },
-		{ "shutdown", "loginctl poweroff" }
+    { "network", networkmenu },
 	}
 })
 
@@ -177,7 +132,7 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 
 -- {{{ Wibox
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock()
+mytextclock = awful.widget.textclock()
 
 -- Create a wibox for each screen and add it
 mywibox = {}
@@ -249,7 +204,7 @@ for s = 1, screen.count() do
 
     -- Widgets that are aligned to the left
     local left_layout = wibox.layout.fixed.horizontal()
-    --left_layout:add(mylauncher)
+    left_layout:add(mylauncher)
     left_layout:add(mytaglist[s])
     left_layout:add(mypromptbox[s])
 
@@ -279,11 +234,6 @@ root.buttons(awful.util.table.join(
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
-    -- Volume Control 
-    awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer -D pulse sset Master 2%+", false) end),
-    awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("amixer -D pulse sset Master 2%-", false) end),
-    awful.key({}, "XF86AudioMute", function () awful.util.spawn("amixer -D pulse sset Master toggle", false) end),
-    -- Window Control
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
@@ -331,25 +281,15 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "n", awful.client.restore),
 
     -- Prompt
-    -- awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen.index]:run() end),
-    awful.key({ modkey },            "r",     function () awful.util.spawn("dmenu_run") end),
-    awful.key({ modkey },            "e",     function () awful.util.spawn("passmenu") end),
-    awful.key({ modkey },            "i",     function () awful.util.spawn("mansplain") end),
+    awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen.index]:run() end),
 
-    
     awful.key({ modkey }, "x",
               function ()
-                  awful.prompt.run {
-                    prompt       = "Run Lua code: ",
-                    textbox      = awful.screen.focused().mypromptbox.widget,
-                    exe_callback = awful.util.eval,
-                    history_path = awful.util.get_cache_dir() .. "/history_eval"
-                  }
-              end,
-              {description = "lua execute prompt", group = "awesome"}),
-
-    -- Spawn Brave
-    awful.key({ modkey }, "b", function () awful.util.spawn("brave") end),
+                  awful.prompt.run({ prompt = "Run Lua code: " },
+                  mypromptbox[mouse.screen].widget,
+                  awful.util.eval, nil,
+                  awful.util.getdir("cache") .. "/history_eval")
+              end),
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end)
 )
@@ -369,22 +309,9 @@ clientkeys = awful.util.table.join(
         end),
     awful.key({ modkey,           }, "m",
         function (c)
-            c.maximized = not c.maximized
-            c:raise()
-        end ,
-        {description = "(un)maximize", group = "client"}),
-    awful.key({ modkey, "Control" }, "m",
-        function (c)
-            c.maximized_vertical = not c.maximized_vertical
-            c:raise()
-        end ,
-        {description = "(un)maximize vertically", group = "client"}),
-    awful.key({ modkey, "Shift"   }, "m",
-        function (c)
             c.maximized_horizontal = not c.maximized_horizontal
-            c:raise()
-        end ,
-        {description = "(un)maximize horizontally", group = "client"})
+            c.maximized_vertical   = not c.maximized_vertical
+        end)
 )
 
 -- Bind all key numbers to tags.
@@ -530,19 +457,3 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
-
-
--- Application Autostart
-awful.spawn.with_shell("blueman-applet")
---awful.spawn.with_shell("firewall-applet")
-awful.spawn.with_shell("nm-applet")
---awful.spawn.with_shell("lxsession")
---awful.spawn.with_shell("connman-gtk --tray")
-awful.spawn.with_shell("xfce4-power-manager")
-awful.spawn.with_shell("start-pulseaudio-x11")
-awful.spawn.with_shell("xfce4-screensaver")
---awful.spawn.with_shell("xscreensaver")
---awful.spawn.with_shell("light-locker")
-awful.spawn.with_shell("xfce4-notifyd")
-awful.spawn.with_shell("pasystray")
-awful.spawn.with_shell("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")

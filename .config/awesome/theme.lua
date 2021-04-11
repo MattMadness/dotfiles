@@ -18,13 +18,13 @@ theme.fg_focus      = "#a765e0"
 theme.fg_urgent     = "#a765e0"
 theme.fg_minimize   = "#000000"
 
-theme.border_width  = 0
-theme.border_normal = "#e06163"
-theme.border_focus  = "#e06163"
+theme.border_width  = 1
+theme.border_normal = "#a765e0"
+theme.border_focus  = "#a765e0"
 theme.border_marked = "#4a1c91"
 
 -- Useless gaps
-theme.useless_gap = 5
+theme.useless_gap = 10
 
 -- There are other variable sets
 -- overriding the blackarch one when
