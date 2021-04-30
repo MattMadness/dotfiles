@@ -97,6 +97,7 @@ NC="\e[m"               # Color Reset
 ##############
 PR_NO_COLOR="%{$terminfo[sgr0]%}"
 PS1="[%(!.${PR_RED}%n.$PR_RED%n)%(!.${PR_LIGHT_YELLOW}@.$PR_CYAN@)$PR_NO_COLOR%(!.${PR_LIGHT_RED}%U%m%u.${PR_RED}%U%m%u)$PR_NO_COLOR:%(!.${PR_RED}%2c.${PR_BLUE}%2c)$PR_NO_COLOR]%(?..[${PR_LIGHT_RED}%?$PR_NO_COLOR])%(!.${PR_LIGHT_RED}#.${PR_LIGHT_GREEN}$) "
+#PS1="(!.${PR_RED}%n.$PR_RED%n)% (!.${PR_RED}%2c.${PR_BLUE}%2c)"
 RPS1="$PR_RED(%D{%l:%M %p })$PR_NO_COLOR"
 unsetopt ALL_EXPORT
 
@@ -179,29 +180,54 @@ mcd () {
 
 ### Set alias
 #############
-alias cls="clear"
-alias ..="cd .."
-alias cd..="cd .."
-alias ll="ls -lisa --color=auto"
-alias home="cd ~"
-alias df="df -ahiT --total"
-alias mkdir="mkdir -pv"
-alias mkfile="touch"
-alias rm="rm -rfi"
-alias userlist="cut -d: -f1 /etc/passwd"
-alias ls="ls -CF --color=auto"
-alias lsl="ls -lhFA | less"
-alias free="free -mt"
-alias du="du -ach | sort -h"
-alias ps="ps auxf"
-alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
-alias wget="wget -c"
-alias histg="history | grep"
-alias myip="curl http://ipecho.net/plain; echo"
-alias logs="find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
-alias folders='find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -rn'
-alias grep='grep --color=auto'
+#alias cls="clear"
+#alias ..="cd .."
+#alias cd..="cd .."
+#alias ll="ls -lisa --color=auto"
+#alias home="cd ~"
+#alias df="df -ahiT --total"
+#alias mkdir="mkdir -pv"
+#alias mkfile="touch"
+#alias rm="rm -rfi"
+#alias userlist="cut -d: -f1 /etc/passwd"
+#alias ls="ls -CF --color=auto"
+#alias lsl="ls -lhFA | less"
+#alias free="free -mt"
+#alias du="du -ach | sort -h"
+#alias ps="ps auxf"
+#alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
+#alias wget="wget -c"
+#alias histg="history | grep"
+#alias myip="curl http://ipecho.net/plain; echo"
+#alias logs="find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
+#alias folders='find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -rn'
+#alias grep='grep --color=auto'
 
+# Useful aliases
+alias c='clear'
+alias ..='cd ..'
+alias ls='ls -l --color=auto'
+alias lsm="ls -al --color=auto"
+alias mkdir='mkdir -pv'
+alias free='free -mt'
+alias ps='ps auxf'
+alias psgrep='ps aux | grep -v grep | grep -i -e VSZ -e'
+alias wget='wget -c'
+alias histg='history | grep'
+alias myip='curl ipv4.icanhazip.com'
+alias grep='grep --color=auto'
+alias ddg='w3m lite.duckduckgo.com/lite'
+alias yayclean='yay -Rs $(pacman -Qqdt)'
+
+# More custom alias
+alias m_bedtime="sudo pacman -Syu --noconfirm && yay -Sayu --answerclean n --answerdiff n --answeredit n --answerupgrade y --removemake --cleanafter && shutdown now"
+alias m_logto="sudo dmesg -w > "
+alias m_firefox="firefox &"
+alias m_wifi="echo Restarting wireless interface... && sudo ifconfig wlp12s0 down && sudo ifconfig wlp12s0 up && echo Waiting 10 seconds for network to restart... && sleep 10 && echo All set!"
+alias m_xfce="cd && rm .xinitrc && echo exec startxfce4 >> .xinitrc && startx"
+alias m_dwm="cd && rm .xinitrc && echo exec dwm >> .xinitrc && startx"
+alias m_lxqt="cd && rm .xinitrc && echo exec startlxqt >> .xinitrc && startx"
+alias m_awesome="cd && rm .xinitrc && echo exec awesome >> .xinitrc && startx"
 
 ### Bind keys
 #############
@@ -297,3 +323,8 @@ zstyle '*' single-ignored show
 ### Source plugins
 ##################
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+## Greeting
+
+echo -e "\n   .------------ymmmdoooooooymmmmm:------------\n   .------------:NMMhyyyyyyyymMMMs------------:\n   .-------------+MdyyyyyyyyyyNMd-------------:\n   .--------------syyyyyyyyyyyhN/--------------\n   .------::------:syyyyyyyyyyy+------/-------:   \n   .------:s-------/yyyyyhyyyys:-----/o-------:   \n   .------:N/-------oyyydNyyyy:-----:m+-------:   \n   .-------mm:------:syyNMdyy+------yM/-------:   \n   .-------mMy-------/ymMMMho------+MM+-------:   \n   .-------mMM+-------oMMMMd:-----:mMM/-------:   \n   .-------mMmy/-------hMMM/------ohMM+-------:   \n   .-------mNyys:------:NMy------+yymM+-------:   \n   .-------mhyyyo-------sm:-----:yyyyN+-------:   \n   .-------hyyyyy/------:+-----:syyyyh+--------   \n   .-------syyyyys:------------+yyyyyy/-------:   \n   .------:syyyyyys-----------/Nyyyyyy/--------   \n   .------:syyyyyhMo---------:mMNyyyyy/--------   \n   .------:syyyyyNMN/--------yMMMdyyyy/-------:   \n   .-------sssssdNNNd-------/NNNNNysss/--------   \n" | lolcat
+         

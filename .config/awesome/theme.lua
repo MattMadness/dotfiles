@@ -4,6 +4,7 @@
 
 theme = {}
 
+--theme.font          = "Spinnaker Regular 10"
 theme.font          = "Fira Code Nerd Font Regular 10"
 --theme.font          = "UbuntuMono Nerd Font Regular 8"
 
@@ -24,7 +25,7 @@ theme.border_focus  = "#a765e0"
 theme.border_marked = "#4a1c91"
 
 -- Useless gaps
-theme.useless_gap = 10
+theme.useless_gap = 5
 
 -- There are other variable sets
 -- overriding the blackarch one when

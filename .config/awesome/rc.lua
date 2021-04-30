@@ -23,6 +23,11 @@ local capi = {
     awesome = awesome,
     client = client
 }
+-- Freedesktop Integration
+local freedesktop = require("freedesktop")
+-- Introspection
+local lgi = require("lgi")
+local gtk = lgi.require("Gtk", "3.0")
 
 -- Run picom for sexiness
 awful.spawn.with_shell("picom")
@@ -57,7 +62,7 @@ end
 beautiful.init("/home/matthew/.config/awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "alacritty"
+terminal = "termite"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -100,11 +105,41 @@ tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
     tags[s] = awful.tag({ "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  " }, s, layouts[1])
+    --tags[s] = awful.tag({ " 1 ", " 2 ", " 3 ", " 4 ", " 5 ", }, s, layouts[1])
 end
 -- }}}
 
 -- {{{ Menu
--- Create a laucher widget and a main menu
+
+myawesomemenu = {
+    { "Manual", terminal .. " -e man awesome" },
+    { "Edit Configuration", editor_cmd .. " " .. awesome.conffile },
+    { "Restart", awesome.restart },
+    { "Quit", awesome.quit }
+}
+
+applicationsmenu = freedesktop.menu.build({
+        before = {
+                { "Search...", "xfce4-appfinder" },
+        }
+})
+
+mymainmenu = freedesktop.menu.build({
+    before = {
+        { "Awesome", myawesomemenu, beautiful.awesome_icon },
+        { "Application Finder", "xfce4-appfinder" },
+    },
+    after = {
+	{ "Big Monitor Mode" , "bothlaptopandmonitor" },
+        --{ "lock screen", "xscreensaver-command --activate" },
+        { "Lock Screen", "xflock4" },
+	--{ "lock screen", "light-locker --activate" },
+	{ "Suspend", "systemctl suspend" },
+	{ "Shutdown", "systemctl poweroff" }
+    }
+})
+
+--[[
 myawesomemenu = {
     { "manual", terminal .. " -e man awesome" },
     { "edit config", editor_cmd .. " " .. awesome.conffile },
@@ -170,6 +205,7 @@ items = {
 	}
 })
 
+]]
 mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
                                      menu = mymainmenu })
 
@@ -179,7 +215,7 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 
 -- {{{ Wibox
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock()
+mytextclock = wibox.widget.textclock(" %m/%d/%y %I:%M %P " )
 
 -- Create a wibox for each screen and add it
 mywibox = {}
@@ -483,7 +519,7 @@ client.connect_signal("manage", function (c, startup)
         end
     end
 
-    local titlebars_enabled = false
+    local titlebars_enabled = true
     if titlebars_enabled and (c.type == "normal" or c.type == "dialog") then
         -- buttons for the titlebar
         local buttons = awful.util.table.join(
@@ -506,10 +542,10 @@ client.connect_signal("manage", function (c, startup)
 
         -- Widgets that are aligned to the right
         local right_layout = wibox.layout.fixed.horizontal()
-        right_layout:add(awful.titlebar.widget.floatingbutton(c))
-        right_layout:add(awful.titlebar.widget.maximizedbutton(c))
-        right_layout:add(awful.titlebar.widget.stickybutton(c))
-        right_layout:add(awful.titlebar.widget.ontopbutton(c))
+        --right_layout:add(awful.titlebar.widget.floatingbutton(c))
+        --right_layout:add(awful.titlebar.widget.maximizedbutton(c))
+        --right_layout:add(awful.titlebar.widget.stickybutton(c))
+        --right_layout:add(awful.titlebar.widget.ontopbutton(c))
         right_layout:add(awful.titlebar.widget.closebutton(c))
 
         -- The title goes in the middle
@@ -533,7 +569,6 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
-
 -- Application Autostart
 awful.spawn.with_shell("blueman-applet")
 --awful.spawn.with_shell("firewall-applet")
@@ -546,5 +581,5 @@ awful.spawn.with_shell("xfce4-screensaver")
 --awful.spawn.with_shell("xscreensaver")
 --awful.spawn.with_shell("light-locker")
 awful.spawn.with_shell("xfce4-notifyd")
-awful.spawn.with_shell("killall pasystray && pasystray")
+awful.spawn.with_shell("killall pasystray; pasystray")
 awful.spawn.with_shell("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
