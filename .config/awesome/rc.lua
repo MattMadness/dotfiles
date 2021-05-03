@@ -127,13 +127,13 @@ applicationsmenu = freedesktop.menu.build({
 mymainmenu = freedesktop.menu.build({
     before = {
         { "Awesome", myawesomemenu, beautiful.awesome_icon },
-        { "Application Finder", "xfce4-appfinder" },
+        { "App Finder", "xfce4-appfinder" },
     },
     after = {
 	{ "Big Monitor Mode" , "bothlaptopandmonitor" },
-        --{ "lock screen", "xscreensaver-command --activate" },
+        --{ "Lock Screen", "xscreensaver-command --activate" },
         { "Lock Screen", "xflock4" },
-	--{ "lock screen", "light-locker --activate" },
+	--{ "Lock Screen", "light-locker --activate" },
 	{ "Suspend", "systemctl suspend" },
 	{ "Shutdown", "systemctl poweroff" }
     }

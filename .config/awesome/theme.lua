@@ -4,7 +4,7 @@
 
 theme = {}
 
---theme.font          = "Spinnaker Regular 10"
+--theme.font          = "IBM Plex Sans Regular 10"
 theme.font          = "Fira Code Nerd Font Regular 10"
 --theme.font          = "UbuntuMono Nerd Font Regular 8"
 
