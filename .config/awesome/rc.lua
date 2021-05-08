@@ -507,6 +507,12 @@ client.connect_signal("manage", function (c, startup)
         end
     end)
 
+    c:connect_signal("button::press", function (c, x, y, button)
+        if not c.maimized and button == 1 and (x < 0 or x >= c.width or y < 0 or y >= c.height) then
+            awful.mouse.client.resize(c)
+        end
+    end)
+
     if not startup then
         -- Set the windows at the slave,
         -- i.e. put it at the end of others instead of setting it master.
@@ -519,7 +525,7 @@ client.connect_signal("manage", function (c, startup)
         end
     end
 
-    local titlebars_enabled = true
+    local titlebars_enabled = false
     if titlebars_enabled and (c.type == "normal" or c.type == "dialog") then
         -- buttons for the titlebar
         local buttons = awful.util.table.join(
@@ -575,7 +581,8 @@ awful.spawn.with_shell("blueman-applet")
 awful.spawn.with_shell("nm-applet")
 --awful.spawn.with_shell("lxsession")
 --awful.spawn.with_shell("connman-gtk --tray")
-awful.spawn.with_shell("xfce4-power-manager")
+--awful.spawn.with_shell("xfce4-power-manager")
+awful.spawn.with_shell("mate-power-manager")
 awful.spawn.with_shell("start-pulseaudio-x11")
 awful.spawn.with_shell("xfce4-screensaver")
 --awful.spawn.with_shell("xscreensaver")

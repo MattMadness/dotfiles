@@ -19,9 +19,9 @@ theme.fg_focus      = "#a765e0"
 theme.fg_urgent     = "#a765e0"
 theme.fg_minimize   = "#FFFFFF"
 
-theme.border_width  = 1
+theme.border_width  = 2
 theme.border_normal = "#a765e0"
-theme.border_focus  = "#a765e0"
+theme.border_focus  = "#800080"
 theme.border_marked = "#4a1c91"
 
 -- Useless gaps
