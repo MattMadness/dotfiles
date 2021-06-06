@@ -11,13 +11,14 @@ theme.font          = "Fira Code Nerd Font Regular 10"
 theme.bg_normal     = "#181818"
 theme.bg_focus      = "#000000"
 theme.bg_urgent     = "#000000"
-theme.bg_minimize   = "#444444"
+--theme.bg_minimize   = "#444444"
+theme.bg_minimize   = theme.bg_normal
 theme.bg_systray    = theme.bg_normal
 
 theme.fg_normal     = "#aaaaaa"
 theme.fg_focus      = "#a765e0"
 theme.fg_urgent     = "#a765e0"
-theme.fg_minimize   = "#FFFFFF"
+theme.fg_minimize   = "#555555"
 
 theme.border_width  = 2
 theme.border_normal = "#a765e0"
@@ -25,7 +26,7 @@ theme.border_focus  = "#800080"
 theme.border_marked = "#4a1c91"
 
 -- Useless gaps
-theme.useless_gap = 5
+theme.useless_gap = 2
 
 -- There are other variable sets
 -- overriding the blackarch one when
@@ -77,7 +78,7 @@ theme.titlebar_maximized_button_focus_inactive  = "/home/matthew/.config/awesome
 theme.titlebar_maximized_button_normal_active = "/home/matthew/.config/awesome/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active  = "/home/matthew/.config/awesome/titlebar/maximized_focus_active.png"
 
-theme.wallpaper = "/home/matthew/.config/awesome/wallpaper.jpg"
+--theme.wallpaper = "/home/matthew/.config/awesome/wallpaper.jpg"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = "/home/matthew/.config/awesome/layouts/fairhw.png"

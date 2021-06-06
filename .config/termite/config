@@ -6,6 +6,7 @@ bold_is_bright = true
 #cell_width_scale = 1.0
 #clickable_url = true
 #dynamic_title = true
+#font = Terminus 10
 font = Fira Code Nerd Font Mono medium 10
 #font = Monospace 9
 #fullscreen = true
@@ -27,7 +28,7 @@ browser = xdg-open
 #cursor_blink = system
 
 # "block", "underline" or "ibeam"
-cursor_shape = ibeam
+cursor_shape = underline
 
 # Hide links that are no longer valid in url select overlay mode
 #filter_unmatched_urls = true
@@ -55,9 +56,9 @@ foreground = #ffffff
 #foreground_bold = #ffffff
 #background = #000000
 
-
 # 20% background transparency (requires a compositor)
-background = rgba(0, 0, 0, 0.8)
+#background = rgba(0, 0, 0, 0.8)
+background = rgba(5, 0, 10, 0.8)
 
 # If unset, will reverse foreground and background
 highlight = #2f2f2f

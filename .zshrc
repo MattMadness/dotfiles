@@ -96,6 +96,7 @@ NC="\e[m"               # Color Reset
 ### Set prompt
 ##############
 PR_NO_COLOR="%{$terminfo[sgr0]%}"
+#PS1="${PR_PURPLE}$(whoami) ${PR_GREEN}$(pwd) \n${RC_RED}> ${PR_NO_COLOR}"
 PS1="[%(!.${PR_RED}%n.$PR_RED%n)%(!.${PR_LIGHT_YELLOW}@.$PR_CYAN@)$PR_NO_COLOR%(!.${PR_LIGHT_RED}%U%m%u.${PR_RED}%U%m%u)$PR_NO_COLOR:%(!.${PR_RED}%2c.${PR_BLUE}%2c)$PR_NO_COLOR]%(?..[${PR_LIGHT_RED}%?$PR_NO_COLOR])%(!.${PR_LIGHT_RED}#.${PR_LIGHT_GREEN}$) "
 #PS1="(!.${PR_RED}%n.$PR_RED%n)% (!.${PR_RED}%2c.${PR_BLUE}%2c)"
 RPS1="$PR_RED(%D{%l:%M %p })$PR_NO_COLOR"

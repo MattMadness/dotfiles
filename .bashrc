@@ -54,17 +54,21 @@ alias histg='history | grep'
 alias myip='curl ipv4.icanhazip.com'
 alias grep='grep --color=auto'
 alias ddg='w3m lite.duckduckgo.com/lite'
-alias yayclean='yay -Rs $(pacman -Qqdt)'
+alias yayclean='pikaur -Rs $(pacman -Qqdt)'
+alias inbox="neomutt -f /var/mail/$(whoami)"
+alias wttr="curl wttr.in"
 
 # More custom alias
 alias m_bedtime="sudo pacman -Syu --noconfirm && yay -Sayu --answerclean n --answerdiff n --answeredit n --answerupgrade y --removemake --cleanafter && shutdown now"
 alias m_logto="sudo dmesg -w > "
 alias m_firefox="firefox &"
-alias m_wifi="echo Restarting wireless interface... && sudo ifconfig wlp12s0 down && sudo ifconfig wlp12s0 up && echo Waiting 10 seconds for network to restart... && sleep 10 && echo All set!"
+alias m_wifi="echo Restarting wireless interface... && sudo ifconfig wlan0 down && sudo ifconfig wlan0 up && echo Waiting 10 seconds for network to restart... && sleep 10 && echo All set!"
+alias m_rcwifi="sudo rc-service NetworkManager start && sudo rc-service smb start && sudo rc-service dnsmasq start && sudo rc-service netmount start"
 alias m_xfce="cd && rm .xinitrc && echo exec startxfce4 >> .xinitrc && startx"
 alias m_dwm="cd && rm .xinitrc && echo exec dwm >> .xinitrc && startx"
 alias m_lxqt="cd && rm .xinitrc && echo exec startlxqt >> .xinitrc && startx"
 alias m_awesome="cd && rm .xinitrc && echo exec awesome >> .xinitrc && startx"
+alias m_qemu="qemu-system-x86_64 -m 2000 -boot d -enable-kvm -smp 1 -net nic -net user"
 
 
 # Extract Function
@@ -95,7 +99,15 @@ extract () {
 # Set PATH so it includes user's private bin directories
 PATH="${HOME}/bin:${HOME}/.local/bin:${PATH}"
 
-PS1="${Red}[${Cyan}\u${Yellow}@${Green}\h${Red}]${NC}: ${Red}\w${NC} \\$ "
+exitstatus()
+{
+    if [[ $? != 0 ]]; then
+        echo -en " ${?}"
+    fi
+}
+
+PS1="${Purple}\u ${Yellow}\w \n$(exitstatus)${Red}> ${NC}"
+#PS1="${Red}[${Cyan}\u${Yellow}@${Green}\h${Red}]${NC}: ${Red}\w${NC} \\$ "
 
 # Start vi mode
 set -o vi

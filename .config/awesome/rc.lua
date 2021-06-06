@@ -109,37 +109,6 @@ for s = 1, screen.count() do
 end
 -- }}}
 
--- {{{ Menu
-
-myawesomemenu = {
-    { "Manual", terminal .. " -e man awesome" },
-    { "Edit Configuration", editor_cmd .. " " .. awesome.conffile },
-    { "Restart", awesome.restart },
-    { "Quit", awesome.quit }
-}
-
-applicationsmenu = freedesktop.menu.build({
-        before = {
-                { "Search...", "xfce4-appfinder" },
-        }
-})
-
-mymainmenu = freedesktop.menu.build({
-    before = {
-        { "Awesome", myawesomemenu, beautiful.awesome_icon },
-        { "App Finder", "xfce4-appfinder" },
-    },
-    after = {
-	{ "Big Monitor Mode" , "bothlaptopandmonitor" },
-        --{ "Lock Screen", "xscreensaver-command --activate" },
-        { "Lock Screen", "xflock4" },
-	--{ "Lock Screen", "light-locker --activate" },
-	{ "Suspend", "systemctl suspend" },
-	{ "Shutdown", "systemctl poweroff" }
-    }
-})
-
---[[
 myawesomemenu = {
     { "manual", terminal .. " -e man awesome" },
     { "edit config", editor_cmd .. " " .. awesome.conffile },
@@ -174,8 +143,9 @@ editmenu = {
 }
 
 filemenu = {
-    { "pcmanfm", "pcmanfm" },
+    { "ranger", "ranger" },
     { "thunar", "thunar" },
+    { "pcmanfm", "pcmanfm" }, 
     { "bleachbit", "bleachbit"},
     { "timeshift", "timeshift-launcher" },
     { "transmission", "transmission-gtk" }
@@ -197,15 +167,16 @@ items = {
 		{ "art", artmenu },
 		{ "more..." , "xfce4-appfinder" },
 		{ "big monitor mode" , "bothlaptopandmonitor" },
+                { "laptop mode" , "onlylaptop" },
                 --{ "lock screen", "xscreensaver-command --activate" },
-		{ "lock screen", "xflock4" },
-		--{ "lock screen", "light-locker --activate" },
-		{ "suspend", "systemctl suspend" },
-		{ "shutdown", "systemctl poweroff" }
+		--{ "lock screen", "xflock4" },
+		{ "lock screen", "loginctl lock-session" },
+		{ "suspend", "loginctl suspend" },
+		{ "reboot", "loginctl reboot" },
+                { "shutdown", "loginctl poweroff" }
 	}
 })
 
-]]
 mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
                                      menu = mymainmenu })
 
@@ -325,6 +296,8 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
+    --awful.key({ modkey, "Control"   }, "h",  awful.tag.viewprev       ),
+    --awful.key({ modkey, "Control"   }, "l",  awful.tag.viewnext       ),
 
     awful.key({ modkey,           }, "j",
         function ()
@@ -368,28 +341,16 @@ globalkeys = awful.util.table.join(
 
     awful.key({ modkey, "Control" }, "n", awful.client.restore),
 
-    -- Prompt
+    -- Prompts
     -- awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen.index]:run() end),
-    awful.key({ modkey },            "r",     function () awful.util.spawn("dmenu_run") end),
+    awful.key({ modkey },            "r",     function () menubar.show() end),
     awful.key({ modkey },            "e",     function () awful.util.spawn("passmenu") end),
     awful.key({ modkey },            "i",     function () awful.util.spawn("mansplain") end),
-
+    awful.key({ modkey }, "p", function() awful.util.spawn("icecastpicker") end),
     
-    awful.key({ modkey }, "x",
-              function ()
-                  awful.prompt.run {
-                    prompt       = "Run Lua code: ",
-                    textbox      = awful.screen.focused().mypromptbox.widget,
-                    exe_callback = awful.util.eval,
-                    history_path = awful.util.get_cache_dir() .. "/history_eval"
-                  }
-              end,
-              {description = "lua execute prompt", group = "awesome"}),
-
-    -- Spawn Brave
-    awful.key({ modkey }, "b", function () awful.util.spawn("brave") end),
-    -- Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end)
+    -- Launch things
+    awful.key({ modkey }, "b", function () awful.util.spawn("exo-open --launch WebBrowser") end),
+    awful.key({ modkey, "Shift" }, "f", function () awful.util.spawn("exo-open --launch FileManager") end)
 )
 
 clientkeys = awful.util.table.join(
@@ -578,15 +539,25 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- Application Autostart
 awful.spawn.with_shell("blueman-applet")
 --awful.spawn.with_shell("firewall-applet")
-awful.spawn.with_shell("nm-applet")
+--awful.spawn.with_shell("nm-applet")
 --awful.spawn.with_shell("lxsession")
---awful.spawn.with_shell("connman-gtk --tray")
+awful.spawn.with_shell("killall connman-gtk; connman-gtk --tray")
 --awful.spawn.with_shell("xfce4-power-manager")
 awful.spawn.with_shell("mate-power-manager")
 awful.spawn.with_shell("start-pulseaudio-x11")
-awful.spawn.with_shell("xfce4-screensaver")
---awful.spawn.with_shell("xscreensaver")
---awful.spawn.with_shell("light-locker")
+--awful.spawn.with_shell("xfce4-screensaver")
+--awful.spawn.with_shell("xscreensaver --no-splash")
+awful.spawn.with_shell("light-locker")
 awful.spawn.with_shell("xfce4-notifyd")
 awful.spawn.with_shell("killall pasystray; pasystray")
 awful.spawn.with_shell("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
+awful.spawn.with_shell("killall indicator-weather; indicator-weather")
+awful.spawn.with_shell("keynav")
+awful.spawn.with_shell("nitrogen --restore")
+
+--awful.spawn.with_shell("espeak 'Welcome back, Matthew.'")
+awful.spawn.with_shell("paplay /usr/share/sounds/LinuxMint/stereo/desktop-login.ogg")
+
+awful.spawn.with_shell("killall fortuned; exec ~/.local/bin/fortuned")
+awful.spawn.with_shell("killall feedrefresher; exec ~/.local/bin/feedrefresher")
+--awful.spawn.with_shell("notify-send -t 10000 Fortune! \"$(fortune)\"")
