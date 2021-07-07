@@ -45,7 +45,7 @@ cursor_shape = underline
 [colors]
 # If both of these are unset, cursor falls back to the foreground color,
 # and cursor_foreground falls back to the background color.
-#cursor = #B3E5FF
+cursor = #4EfA06
 #cursor_foreground = #dcdccc
 
 #foreground = #FFE5B3

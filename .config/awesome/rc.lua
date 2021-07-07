@@ -24,7 +24,7 @@ local capi = {
     client = client
 }
 -- Freedesktop Integration
-local freedesktop = require("freedesktop")
+--local freedesktop = require("freedesktop")
 -- Introspection
 local lgi = require("lgi")
 local gtk = lgi.require("Gtk", "3.0")
@@ -539,9 +539,9 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- Application Autostart
 awful.spawn.with_shell("blueman-applet")
 --awful.spawn.with_shell("firewall-applet")
---awful.spawn.with_shell("nm-applet")
+awful.spawn.with_shell("killall nm-applet; nm-applet")
 --awful.spawn.with_shell("lxsession")
-awful.spawn.with_shell("killall connman-gtk; connman-gtk --tray")
+--awful.spawn.with_shell("killall connman-gtk; connman-gtk --tray")
 --awful.spawn.with_shell("xfce4-power-manager")
 awful.spawn.with_shell("mate-power-manager")
 awful.spawn.with_shell("start-pulseaudio-x11")
@@ -554,6 +554,7 @@ awful.spawn.with_shell("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-
 awful.spawn.with_shell("killall indicator-weather; indicator-weather")
 awful.spawn.with_shell("keynav")
 awful.spawn.with_shell("nitrogen --restore")
+awful.spawn.with_shell("export DESKTOP_SESSION=xfce")
 
 --awful.spawn.with_shell("espeak 'Welcome back, Matthew.'")
 awful.spawn.with_shell("paplay /usr/share/sounds/LinuxMint/stereo/desktop-login.ogg")

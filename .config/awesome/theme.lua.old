@@ -100,8 +100,5 @@ theme.awesome_icon = "/home/matthew/.config/awesome/icon.png"
 -- from /usr/share/icons and /usr/share/icons/hicolor will be used.
 theme.icon_theme = nil
 
--- Systray Icon Size
-theme.systray_icon_spacing = 4
-
 return theme
 -- vim: filetype=lua:expandtab:shiftwidth=4:tabstop=8:softtabstop=4:textwidth=80

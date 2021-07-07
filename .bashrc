@@ -57,8 +57,11 @@ alias ddg='w3m lite.duckduckgo.com/lite'
 alias yayclean='pikaur -Rs $(pacman -Qqdt)'
 alias inbox="neomutt -f /var/mail/$(whoami)"
 alias wttr="curl wttr.in"
+alias doom="~/.emacs.d/bin/doom"
+alias todo="vim ~/Notes/Todo/todo.md"
 
 # More custom alias
+alias m_stopalarm="touch ~/startalarm && sleep 10 && rm ~/startalarm"
 alias m_bedtime="sudo pacman -Syu --noconfirm && yay -Sayu --answerclean n --answerdiff n --answeredit n --answerupgrade y --removemake --cleanafter && shutdown now"
 alias m_logto="sudo dmesg -w > "
 alias m_firefox="firefox &"
@@ -68,7 +71,7 @@ alias m_xfce="cd && rm .xinitrc && echo exec startxfce4 >> .xinitrc && startx"
 alias m_dwm="cd && rm .xinitrc && echo exec dwm >> .xinitrc && startx"
 alias m_lxqt="cd && rm .xinitrc && echo exec startlxqt >> .xinitrc && startx"
 alias m_awesome="cd && rm .xinitrc && echo exec awesome >> .xinitrc && startx"
-alias m_qemu="qemu-system-x86_64 -m 2000 -boot d -enable-kvm -smp 1 -net nic -net user"
+alias m_qemu="qemu-system-x86_64 -m 3000 -boot d -smp 2 -net nic -net user" # -enable-kvm 
 
 
 # Extract Function
@@ -94,7 +97,11 @@ extract () {
 }
 
 # Intro
-#pfetch
+#echo
+#bat -p ~/Notes/Todo/todo.md
+#echo
+#echo "Use the todo command to edit your To-do list."
+#echo
 
 # Set PATH so it includes user's private bin directories
 PATH="${HOME}/bin:${HOME}/.local/bin:${PATH}"
