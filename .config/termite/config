@@ -7,7 +7,7 @@ bold_is_bright = true
 #clickable_url = true
 #dynamic_title = true
 #font = Terminus 10
-font = Fira Code Nerd Font Mono medium 10
+font = Fira Code Nerd Font Mono medium 13
 #font = Monospace 9
 #fullscreen = true
 icon_name = terminal
@@ -16,13 +16,13 @@ mouse_autohide = true
 #scroll_on_keystroke = true
 # Length of the scrollback buffer, 0 disabled the scrollback buffer
 # and setting it to a negative value means "infinite scrollback"
-scrollback_lines = 10000
+scrollback_lines = -1
 #search_wrap = true
 #urgent_on_bell = true
 #hyperlinks = false
 
 # $BROWSER is used by default if set, with xdg-open as a fallback
-browser = xdg-open
+#browser = xdg-open
 
 # "system", "on" or "off"
 #cursor_blink = system
@@ -59,6 +59,10 @@ foreground = #ffffff
 # 20% background transparency (requires a compositor)
 #background = rgba(0, 0, 0, 0.8)
 background = rgba(5, 0, 10, 0.8)
+
+# Nostalgic Red
+#foreground = #FFE5B3
+#background = #010000
 
 # If unset, will reverse foreground and background
 highlight = #2f2f2f

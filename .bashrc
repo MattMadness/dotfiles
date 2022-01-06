@@ -20,9 +20,7 @@ White='\[\e[0;37m\]'	# White
 BBlack='\[\e[1;30m\]'	# Black
 BRed='\[\e[1;31m\]'		# Red
 BGreen='\[\e[1;32m\]'	# Green
-BYellow='\[\e[1;33m\]'	# Yellow
-BBlue='\[\e[1;34m\]'	# Blue
-BPurple='\[\e[1;35m\]'	# Purple
+BYellow='\[\e[1;33m\]'	# Yellow BBlue='\[\e[1;34m\]'	# Blue BPurple='\[\e[1;35m\]'	# Purple
 BCyan='\[\e[1;36m\]'	# Cyan
 BWhite='\[\e[1;37m\]'	# White
 
@@ -71,6 +69,7 @@ alias m_xfce="cd && rm .xinitrc && echo exec startxfce4 >> .xinitrc && startx"
 alias m_dwm="cd && rm .xinitrc && echo exec dwm >> .xinitrc && startx"
 alias m_lxqt="cd && rm .xinitrc && echo exec startlxqt >> .xinitrc && startx"
 alias m_awesome="cd && rm .xinitrc && echo exec awesome >> .xinitrc && startx"
+alias m_plasmawayland="cd && rm .xinitrc && echo exec startplasma-wayland >> .xinitrc && startx"
 alias m_qemu="qemu-system-x86_64 -m 3000 -boot d -smp 2 -net nic -net user" # -enable-kvm 
 
 
@@ -113,8 +112,11 @@ exitstatus()
     fi
 }
 
-PS1="${Purple}\u ${Yellow}\w \n$(exitstatus)${Red}> ${NC}"
+PS1="${Cyan}\u ${Blue}\w \n$(exitstatus)${Green}$ ${NC}"
 #PS1="${Red}[${Cyan}\u${Yellow}@${Green}\h${Red}]${NC}: ${Red}\w${NC} \\$ "
+
+# Activate command-not-found
+#source /usr/share/doc/pkgfile/command-not-found.bash
 
 # Start vi mode
 set -o vi

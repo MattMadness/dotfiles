@@ -19,6 +19,7 @@ echo "Importing dot configs..."
 
 cp ./.bashrc ~/.bashrc 
 cp ./.zshrc ~/.zshrc 
+cp ./.config/alacritty.yml ~/.config/alacritty.yml
 
 rm -rfv ~/.config/Thunar/*
 rm -rfv ~/.config/awesome/*

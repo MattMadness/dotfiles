@@ -6,24 +6,27 @@ theme = {}
 
 --theme.font          = "IBM Plex Sans Regular 10"
 theme.font          = "Fira Code Nerd Font Regular 10"
---theme.font          = "UbuntuMono Nerd Font Regular 8"
+--theme.font          = "Hurmit Nerd Font Regular 11"
 
 theme.bg_normal     = "#181818"
 theme.bg_focus      = "#000000"
 theme.bg_urgent     = "#000000"
---theme.bg_minimize   = "#444444"
 theme.bg_minimize   = theme.bg_normal
 theme.bg_systray    = theme.bg_normal
 
 theme.fg_normal     = "#aaaaaa"
-theme.fg_focus      = "#a765e0"
-theme.fg_urgent     = "#a765e0"
+theme.fg_focus      = "#65c1e0"
+theme.fg_urgent     = "#65c1e0"
+--theme.fg_focus      = "#a765e0"
+--theme.fg_urgent     = "#a765e0"
 theme.fg_minimize   = "#555555"
 
 theme.border_width  = 2
-theme.border_normal = "#a765e0"
-theme.border_focus  = "#800080"
-theme.border_marked = "#4a1c91"
+theme.border_normal = "#003880"
+theme.border_focus  = "#65c1e0"
+--theme.border_focus  = "#800080"
+theme.border_marked = "#261c91"
+--theme.border_marked = "#4a1c91"
 
 -- Useless gaps
 theme.useless_gap = 2

@@ -8,6 +8,7 @@ rm -rfv ./.config/*
 
 cp ~/.bashrc ./.bashrc
 cp ~/.zshrc ./.zshrc
+cp ~/.config/alacritty.yml ./.config/alacritty.yml
 
 cp -rv ~/.config/Thunar ./.config/
 cp -rv ~/.config/awesome ./.config/

@@ -62,8 +62,8 @@ end
 beautiful.init("/home/matthew/.config/awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "termite"
-editor = os.getenv("EDITOR") or "vim"
+terminal = "alacritty"
+editor = os.getenv("EDITOR") or "emacs"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -92,11 +92,11 @@ local layouts =
 -- }}}
 
 -- {{{ Wallpaper
-if beautiful.wallpaper then
-    for s = 1, screen.count() do
-        gears.wallpaper.maximized(beautiful.wallpaper, s, true)
-    end
-end
+--if beautiful.wallpaper then
+--    for s = 1, screen.count() do
+--        gears.wallpaper.maximized(beautiful.wallpaper, s, true)
+--    end
+--end
 -- }}}
 
 -- {{{ Tags
@@ -159,7 +159,7 @@ artmenu = {
 
 mymainmenu = awful.menu({
 items = {
-		{ "awesome", myawesomemenu, beautiful.awesome_icon },
+		{ "sapphire", myawesomemenu, beautiful.awesome_icon },
 		{ "terminals", termmenu },
 		{ "browsers", browsermenu },
 		{ "files", filemenu },
@@ -172,6 +172,7 @@ items = {
 		--{ "lock screen", "xflock4" },
 		{ "lock screen", "loginctl lock-session" },
 		{ "suspend", "loginctl suspend" },
+		{ "hibernate", "loginctl hibernate" },
 		{ "reboot", "loginctl reboot" },
                 { "shutdown", "loginctl poweroff" }
 	}
@@ -288,10 +289,6 @@ root.buttons(awful.util.table.join(
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
-    -- Volume Control 
-    awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer -D pulse sset Master 2%+", false) end),
-    awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("amixer -D pulse sset Master 2%-", false) end),
-    awful.key({}, "XF86AudioMute", function () awful.util.spawn("amixer -D pulse sset Master toggle", false) end),
     -- Window Control
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
@@ -350,7 +347,14 @@ globalkeys = awful.util.table.join(
     
     -- Launch things
     awful.key({ modkey }, "b", function () awful.util.spawn("exo-open --launch WebBrowser") end),
-    awful.key({ modkey, "Shift" }, "f", function () awful.util.spawn("exo-open --launch FileManager") end)
+    awful.key({ modkey, "Shift" }, "f", function () awful.util.spawn("exo-open --launch FileManager") end),
+    awful.key({}, "XF86Mail", function () awful.util.spawn("exo-open --launch MailReader") end),
+    awful.key({}, "XF86Tools", function () awful.util.spawn("clementine") end),
+
+    -- Volume Control 
+    awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer -D pulse sset Master 2%+", false) end),
+    awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("amixer -D pulse sset Master 2%-", false) end),
+    awful.key({}, "XF86AudioMute", function () awful.util.spawn("amixer -D pulse sset Master toggle", false) end)
 )
 
 clientkeys = awful.util.table.join(
@@ -537,13 +541,14 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 -- Application Autostart
+--awful.spawn.with_shell("exec ~/.local/bin/pipewirelaunch")
 awful.spawn.with_shell("blueman-applet")
 --awful.spawn.with_shell("firewall-applet")
 awful.spawn.with_shell("killall nm-applet; nm-applet")
 --awful.spawn.with_shell("lxsession")
 --awful.spawn.with_shell("killall connman-gtk; connman-gtk --tray")
---awful.spawn.with_shell("xfce4-power-manager")
-awful.spawn.with_shell("mate-power-manager")
+awful.spawn.with_shell("xfce4-power-manager")
+--awful.spawn.with_shell("mate-power-manager")
 awful.spawn.with_shell("start-pulseaudio-x11")
 --awful.spawn.with_shell("xfce4-screensaver")
 --awful.spawn.with_shell("xscreensaver --no-splash")

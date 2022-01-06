@@ -40,7 +40,7 @@ zle -N history-beginning-search-forward-end history-search-end
 
 ### Set variables
 #################
-PATH="/usr/local/bin:/usr/local/sbin/:$PATH"
+PATH="/usr/local/bin:/usr/local/sbin/:~/.local/bin/:$PATH"
 HISTFILE=$HOME/.zhistory
 HISTSIZE=1000
 SAVEHIST=1000
@@ -218,7 +218,12 @@ alias histg='history | grep'
 alias myip='curl ipv4.icanhazip.com'
 alias grep='grep --color=auto'
 alias ddg='w3m lite.duckduckgo.com/lite'
-alias yayclean='yay -Rs $(pacman -Qqdt)'
+alias yayclean='pacman -Rs $(pacman -Qqdt)'
+alias cat="bat -p"
+alias inbox="neomutt -f /var/mail/$(whoami)"
+alias wttr="curl wttr.in"
+alias doom="~/.emacs.d/bin/doom"
+alias todo="vim ~/Notes/Todo/todo.md"
 
 # More custom alias
 alias m_bedtime="sudo pacman -Syu --noconfirm && yay -Sayu --answerclean n --answerdiff n --answeredit n --answerupgrade y --removemake --cleanafter && shutdown now"
@@ -229,6 +234,8 @@ alias m_xfce="cd && rm .xinitrc && echo exec startxfce4 >> .xinitrc && startx"
 alias m_dwm="cd && rm .xinitrc && echo exec dwm >> .xinitrc && startx"
 alias m_lxqt="cd && rm .xinitrc && echo exec startlxqt >> .xinitrc && startx"
 alias m_awesome="cd && rm .xinitrc && echo exec awesome >> .xinitrc && startx"
+alias m_plasmawayland="cd && rm .xinitrc && echo exec startplasma-wayland >> .xinitrc && startx"
+alias m_qemu="qemu-system-x86_64 -m 3000 -boot d -smp 2 -net nic -net user" # -enable-kvm 
 
 ### Bind keys
 #############
@@ -325,7 +332,18 @@ zstyle '*' single-ignored show
 ##################
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+## Vi mode
+bindkey -v
+
+# Use vim keys in tab complete menu:
+# thanks Luke Smith
+#bindkey -M menuselect 'h' vi-backward-char
+#bindkey -M menuselect 'k' vi-up-line-or-history
+#bindkey -M menuselect 'l' vi-forward-char
+#bindkey -M menuselect 'j' vi-down-line-or-history
+#bindkey -v '^?' backward-delete-char
+
 ## Greeting
 
-echo -e "\n   .------------ymmmdoooooooymmmmm:------------\n   .------------:NMMhyyyyyyyymMMMs------------:\n   .-------------+MdyyyyyyyyyyNMd-------------:\n   .--------------syyyyyyyyyyyhN/--------------\n   .------::------:syyyyyyyyyyy+------/-------:   \n   .------:s-------/yyyyyhyyyys:-----/o-------:   \n   .------:N/-------oyyydNyyyy:-----:m+-------:   \n   .-------mm:------:syyNMdyy+------yM/-------:   \n   .-------mMy-------/ymMMMho------+MM+-------:   \n   .-------mMM+-------oMMMMd:-----:mMM/-------:   \n   .-------mMmy/-------hMMM/------ohMM+-------:   \n   .-------mNyys:------:NMy------+yymM+-------:   \n   .-------mhyyyo-------sm:-----:yyyyN+-------:   \n   .-------hyyyyy/------:+-----:syyyyh+--------   \n   .-------syyyyys:------------+yyyyyy/-------:   \n   .------:syyyyyys-----------/Nyyyyyy/--------   \n   .------:syyyyyhMo---------:mMNyyyyy/--------   \n   .------:syyyyyNMN/--------yMMMdyyyy/-------:   \n   .-------sssssdNNNd-------/NNNNNysss/--------   \n" | lolcat
+#echo -e "\n   .------------ymmmdoooooooymmmmm:------------\n   .------------:NMMhyyyyyyyymMMMs------------:\n   .-------------+MdyyyyyyyyyyNMd-------------:\n   .--------------syyyyyyyyyyyhN/--------------\n   .------::------:syyyyyyyyyyy+------/-------:   \n   .------:s-------/yyyyyhyyyys:-----/o-------:   \n   .------:N/-------oyyydNyyyy:-----:m+-------:   \n   .-------mm:------:syyNMdyy+------yM/-------:   \n   .-------mMy-------/ymMMMho------+MM+-------:   \n   .-------mMM+-------oMMMMd:-----:mMM/-------:   \n   .-------mMmy/-------hMMM/------ohMM+-------:   \n   .-------mNyys:------:NMy------+yymM+-------:   \n   .-------mhyyyo-------sm:-----:yyyyN+-------:   \n   .-------hyyyyy/------:+-----:syyyyh+--------   \n   .-------syyyyys:------------+yyyyyy/-------:   \n   .------:syyyyyys-----------/Nyyyyyy/--------   \n   .------:syyyyyhMo---------:mMNyyyyy/--------   \n   .------:syyyyyNMN/--------yMMMdyyyy/-------:   \n   .-------sssssdNNNd-------/NNNNNysss/--------   \n" | lolcat
          
