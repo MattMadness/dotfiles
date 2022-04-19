@@ -28,9 +28,10 @@ local capi = {
 -- Introspection
 local lgi = require("lgi")
 local gtk = lgi.require("Gtk", "3.0")
+local cmus_widget = require('awesome-wm-widgets.cmus-widget.cmus')
 
 -- Run picom for sexiness
-awful.spawn.with_shell("picom")
+awful.spawn.with_shell("killall picom; picom")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -76,7 +77,6 @@ modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 local layouts =
 {
-    awful.layout.suit.floating,
     awful.layout.suit.tile,
     awful.layout.suit.tile.left,
     awful.layout.suit.tile.bottom,
@@ -87,7 +87,8 @@ local layouts =
     awful.layout.suit.spiral.dwindle,
     awful.layout.suit.max,
     awful.layout.suit.max.fullscreen,
-    awful.layout.suit.magnifier
+    awful.layout.suit.magnifier,
+    awful.layout.suit.floating
 }
 -- }}}
 
@@ -136,7 +137,7 @@ browsermenu = {
 editmenu = {
     { "libreoffice", "libreoffice" },
     { "texmaker", "texmaker" },
-    { "vim", "termite --exec=vim" },
+    { "vim", "alacritty --exec=vim" },
     { "emacs", "emacs" },
     { "sublime", "subl" },
     { "geany", "geany" }
@@ -167,10 +168,11 @@ items = {
 		{ "art", artmenu },
 		{ "more..." , "xfce4-appfinder" },
 		{ "big monitor mode" , "bothlaptopandmonitor" },
-                { "laptop mode" , "onlylaptop" },
-                --{ "lock screen", "xscreensaver-command --activate" },
+        	{ "laptop mode" , "onlylaptop" },
+        	{ "lock screen", "xscreensaver-command --activate" },
+		{ "switch user", "dm-tool switch-to-greeter" },
 		--{ "lock screen", "xflock4" },
-		{ "lock screen", "loginctl lock-session" },
+		--{ "lock screen", "loginctl lock-session" },
 		{ "suspend", "loginctl suspend" },
 		{ "hibernate", "loginctl hibernate" },
 		{ "reboot", "loginctl reboot" },
@@ -188,6 +190,10 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- {{{ Wibox
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock(" %m/%d/%y %I:%M %P " )
+
+myspacer = wibox.widget.separator({ forced_width = 15, color = "#181818", shape = gears.shape.rectangle })
+
+cmuswidget = wibox.container.margin(cmus_widget(), 6, 6, 6, 6)
 
 -- Create a wibox for each screen and add it
 mywibox = {}
@@ -252,22 +258,33 @@ for s = 1, screen.count() do
     mytaglist[s] = awful.widget.taglist(s, awful.widget.taglist.filter.all, mytaglist.buttons)
 
     -- Create a tasklist widget
-    mytasklist[s] = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, mytasklist.buttons)
+    --mytasklist[s] = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, mytasklist.buttons)
+    mytasklist[s] = awful.widget.tasklist {
+	screen = s, 
+	filter = awful.widget.tasklist.filter.currenttags,
+	buttons = mytasklist.buttons,
+	border_width = 2,
+	border_color = "#FFFFFF"
+    }
+
 
     -- Create the wibox
-    mywibox[s] = awful.wibox({ position = "top", screen = s })
+    mywibox[s] = awful.wibox({ position = "top", screen = s, border_width = 5, shape = gears.shape.hexagon })
 
     -- Widgets that are aligned to the left
     local left_layout = wibox.layout.fixed.horizontal()
     --left_layout:add(mylauncher)
+    left_layout:add(myspacer)
     left_layout:add(mytaglist[s])
     left_layout:add(mypromptbox[s])
 
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
+    right_layout:add(cmuswidget)
     if s == 1 then right_layout:add(wibox.widget.systray()) end
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])
+    right_layout:add(myspacer)
 
     -- Now bring it all together (with the tasklist in the middle)
     local layout = wibox.layout.align.horizontal()
@@ -453,8 +470,12 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { class = "pinentry" },
       properties = { floating = true } },
-    { rule = { class = "gimp" },
-      properties = { floating = true } },
+    { rule = { class = "Pidgin" },
+      properties = { tag = "  " } },
+    { rule = { class = "Thunderbird" },
+      properties = { tag = "  " } },
+    { rule = { class = "Plank" },
+      properties = { below = true, border_width = 0 } },
     -- Set Firefox to always map on tags number 2 of screen 1.
     -- { rule = { class = "Firefox" },
     --   properties = { tag = tags[1][2] } },
@@ -544,25 +565,28 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 --awful.spawn.with_shell("exec ~/.local/bin/pipewirelaunch")
 awful.spawn.with_shell("blueman-applet")
 --awful.spawn.with_shell("firewall-applet")
-awful.spawn.with_shell("killall nm-applet; nm-applet")
+--awful.spawn.with_shell("killall nm-applet; nm-applet")
 --awful.spawn.with_shell("lxsession")
---awful.spawn.with_shell("killall connman-gtk; connman-gtk --tray")
-awful.spawn.with_shell("xfce4-power-manager")
---awful.spawn.with_shell("mate-power-manager")
+awful.spawn.with_shell("killall connman-gtk; connman-gtk --tray")
+--awful.spawn.with_shell("xfce4-power-manager")
+awful.spawn.with_shell("mate-power-manager")
 awful.spawn.with_shell("start-pulseaudio-x11")
 --awful.spawn.with_shell("xfce4-screensaver")
---awful.spawn.with_shell("xscreensaver --no-splash")
-awful.spawn.with_shell("light-locker")
+awful.spawn.with_shell("xscreensaver --no-splash")
+--awful.spawn.with_shell("light-locker")
 awful.spawn.with_shell("xfce4-notifyd")
-awful.spawn.with_shell("killall pasystray; pasystray")
+awful.spawn.with_shell("killall volumeicon; volumeicon")
 awful.spawn.with_shell("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
 awful.spawn.with_shell("killall indicator-weather; indicator-weather")
 awful.spawn.with_shell("keynav")
 awful.spawn.with_shell("nitrogen --restore")
 awful.spawn.with_shell("export DESKTOP_SESSION=xfce")
+awful.spawn.with_shell("nextcloud")
+awful.spawn.with_shell("killall buckle; buckle")
 
 --awful.spawn.with_shell("espeak 'Welcome back, Matthew.'")
-awful.spawn.with_shell("paplay /usr/share/sounds/LinuxMint/stereo/desktop-login.ogg")
+--awful.spawn.with_shell("paplay /usr/share/sounds/LinuxMint/stereo/desktop-login.ogg")
+awful.spawn.with_shell("paplay /usr/share/music/sapphire/sapphtone.ogg")
 
 awful.spawn.with_shell("killall fortuned; exec ~/.local/bin/fortuned")
 awful.spawn.with_shell("killall feedrefresher; exec ~/.local/bin/feedrefresher")

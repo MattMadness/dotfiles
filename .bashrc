@@ -70,7 +70,7 @@ alias m_dwm="cd && rm .xinitrc && echo exec dwm >> .xinitrc && startx"
 alias m_lxqt="cd && rm .xinitrc && echo exec startlxqt >> .xinitrc && startx"
 alias m_awesome="cd && rm .xinitrc && echo exec awesome >> .xinitrc && startx"
 alias m_plasmawayland="cd && rm .xinitrc && echo exec startplasma-wayland >> .xinitrc && startx"
-alias m_qemu="qemu-system-x86_64 -m 3000 -boot d -smp 2 -net nic -net user" # -enable-kvm 
+alias m_qemu="qemu-system-x86_64 -m 3000 -boot d -smp 2 -net nic -net user -enable-kvm" 
 
 
 # Extract Function
@@ -103,7 +103,7 @@ extract () {
 #echo
 
 # Set PATH so it includes user's private bin directories
-PATH="${HOME}/bin:${HOME}/.local/bin:${PATH}"
+PATH="${HOME}/bin:${HOME}/.local/bin/:${PATH}"
 
 exitstatus()
 {
@@ -120,3 +120,5 @@ PS1="${Cyan}\u ${Blue}\w \n$(exitstatus)${Green}$ ${NC}"
 
 # Start vi mode
 set -o vi
+PYTHON_BIN_PATH="$(python -m site --user-base)/bin"
+export PATH="$PATH:$PYTHON_BIN_PATH"

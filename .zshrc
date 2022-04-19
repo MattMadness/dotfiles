@@ -15,8 +15,7 @@ setopt APPEND_HISTORY
 # setopt AUTO_RESUME
 unsetopt BG_NICE
 setopt CORRECT
-setopt EXTENDED_HISTORY
-# setopt HASH_CMDS
+setopt EXTENDED_HISTORY # setopt HASH_CMDS
 setopt MENUCOMPLETE
 setopt ALL_EXPORT
 
@@ -127,8 +126,8 @@ function sysinfo()   # Get current host related info.
     echo -e "\n${BRed}Server stats :$NC " ; uptime
     echo -e "\n${BRed}Memory stats :$NC " ; free
     echo -e "\n${BRed}Public IP Address :$NC " ; my_ip
-    echo -e "\n${BRed}Open connections :$NC "; netstat -pan --inet;
-    echo -e "\n${BRed}CPU info :$NC "; cat /proc/cpuinfo ;
+    #echo -e "\n${BRed}Open connections :$NC "; netstat -pan --inet;
+    #echo -e "\n${BRed}CPU info :$NC "; cat /proc/cpuinfo ;
     echo -e "\n"
 }
 
@@ -224,6 +223,16 @@ alias inbox="neomutt -f /var/mail/$(whoami)"
 alias wttr="curl wttr.in"
 alias doom="~/.emacs.d/bin/doom"
 alias todo="vim ~/Notes/Todo/todo.md"
+acp() {
+	if [ -n "$1" ]; then
+		git add -A
+		git commit -m "$1"
+		pass codeburg
+		git push
+	else
+		echo "Add a commit message."
+	fi
+}
 
 # More custom alias
 alias m_bedtime="sudo pacman -Syu --noconfirm && yay -Sayu --answerclean n --answerdiff n --answeredit n --answerupgrade y --removemake --cleanafter && shutdown now"
@@ -235,7 +244,7 @@ alias m_dwm="cd && rm .xinitrc && echo exec dwm >> .xinitrc && startx"
 alias m_lxqt="cd && rm .xinitrc && echo exec startlxqt >> .xinitrc && startx"
 alias m_awesome="cd && rm .xinitrc && echo exec awesome >> .xinitrc && startx"
 alias m_plasmawayland="cd && rm .xinitrc && echo exec startplasma-wayland >> .xinitrc && startx"
-alias m_qemu="qemu-system-x86_64 -m 3000 -boot d -smp 2 -net nic -net user" # -enable-kvm 
+alias m_qemu="qemu-system-x86_64 -m 3000 -boot d -smp 2 -net nic -net user -enable-kvm"
 
 ### Bind keys
 #############
@@ -347,3 +356,9 @@ bindkey -v
 
 #echo -e "\n   .------------ymmmdoooooooymmmmm:------------\n   .------------:NMMhyyyyyyyymMMMs------------:\n   .-------------+MdyyyyyyyyyyNMd-------------:\n   .--------------syyyyyyyyyyyhN/--------------\n   .------::------:syyyyyyyyyyy+------/-------:   \n   .------:s-------/yyyyyhyyyys:-----/o-------:   \n   .------:N/-------oyyydNyyyy:-----:m+-------:   \n   .-------mm:------:syyNMdyy+------yM/-------:   \n   .-------mMy-------/ymMMMho------+MM+-------:   \n   .-------mMM+-------oMMMMd:-----:mMM/-------:   \n   .-------mMmy/-------hMMM/------ohMM+-------:   \n   .-------mNyys:------:NMy------+yymM+-------:   \n   .-------mhyyyo-------sm:-----:yyyyN+-------:   \n   .-------hyyyyy/------:+-----:syyyyh+--------   \n   .-------syyyyys:------------+yyyyyy/-------:   \n   .------:syyyyyys-----------/Nyyyyyy/--------   \n   .------:syyyyyhMo---------:mMNyyyyy/--------   \n   .------:syyyyyNMN/--------yMMMdyyyy/-------:   \n   .-------sssssdNNNd-------/NNNNNysss/--------   \n" | lolcat
          
+
+PATH="/home/matthew/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/matthew/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/matthew/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/matthew/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/matthew/perl5"; export PERL_MM_OPT;

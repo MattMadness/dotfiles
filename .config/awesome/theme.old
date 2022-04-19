@@ -101,10 +101,10 @@ theme.awesome_icon = "/home/matthew/.config/awesome/icon.png"
 
 -- Define the icon theme for application icons. If not set then the icons
 -- from /usr/share/icons and /usr/share/icons/hicolor will be used.
-theme.icon_theme = "ePapirus-Dark"
+theme.icon_theme = nil
 
 -- Systray Icon Size
---theme.icon_spacing = 4
+theme.systray_icon_spacing = 4
 
 return theme
 -- vim: filetype=lua:expandtab:shiftwidth=4:tabstop=8:softtabstop=4:textwidth=80
